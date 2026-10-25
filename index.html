@@ -1,120 +1,23 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!doctype html>
+<html lang="pt-PT">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sapiens · Ementa digital · Menu</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Poiret+One&family=DM+Sans:wght@400;500;700&display=swap">
-<style>
-:root{--ink:#120d0e;--cream:#f3ece4;--mute:#b9aaa3;--line:rgba(243,236,228,.18);--chip:rgba(18,13,14,.6);--leaf:#46c26a;
---serif:"Fraunces",Georgia,"Times New Roman",serif;--mark:"Poiret One","Didot",Georgia,serif;--sans:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
-*,*::before,*::after{box-sizing:inherit}
-html{height:100%}
-body{height:100%;margin:0;background:var(--ink);color:var(--cream);font-family:var(--sans);overflow:hidden}
-header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:5;display:flex;gap:8px;align-items:center;padding:12px 14px}
-.brand{font:400 26px/1 var(--mark);margin-right:4px}
-nav{display:flex;gap:8px;overflow-x:auto;flex:1;scrollbar-width:none}
-nav::-webkit-scrollbar{display:none}
-.chip{flex:none;border:1px solid var(--line);background:var(--chip);color:var(--cream);font:500 14px var(--sans);padding:8px 14px;border-radius:99px;backdrop-filter:blur(8px);cursor:pointer}
-.chip[aria-current=true]{background:var(--cream);color:var(--ink);border-color:var(--cream)}
-main{position:relative;height:100%;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none}
-main::-webkit-scrollbar{display:none}
-.sc{position:relative;height:100%;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;justify-content:flex-end;padding:0 22px calc(36px + env(safe-area-inset-bottom,0px));overflow:hidden}
-.glow{position:absolute;inset:0;background:radial-gradient(70% 55% at 70% 32%,var(--c) 0%,transparent 70%),linear-gradient(180deg,transparent 40%,var(--ink) 92%)}
-.photo{position:absolute;left:50%;top:24%;width:min(66vw,340px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;border:1px dashed var(--line);display:grid;place-items:center;color:var(--mute);font-size:13px;text-align:center;padding:24px}
-.txt{position:relative;max-width:520px}
-h2{font:600 clamp(34px,10vw,52px)/1.02 var(--serif);margin:0 0 10px;letter-spacing:-.01em}
-.d{margin:0 0 10px;color:var(--mute);line-height:1.5;font-size:16px;max-width:42ch}
-.nt{margin:0 0 14px;color:var(--mute);font-size:13px}
-.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.price{font:500 17px var(--sans);border:1px solid var(--line);border-radius:12px;padding:8px 13px;background:var(--chip)}
-.tag{font-size:13px;color:var(--mute)}
-.leaf{display:inline-block;width:12px;height:12px;margin-right:6px;background:var(--leaf);border-radius:0 100% 0 100%}
-.heart{margin-left:auto;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--chip);color:var(--cream);font-size:20px;cursor:pointer}
-.heart[aria-pressed=true]{background:var(--cream);color:#b3243b}
-.lst{position:relative;width:100%;max-width:560px;margin:0 auto;height:100%;overflow-y:auto;padding:84px 0 8px;scrollbar-width:none}
-.lst h2{margin-bottom:14px}
-.lst h3{font:600 22px/1.1 var(--serif);margin:22px 0 4px}
-.sn{margin:0 0 6px;color:var(--mute);font-size:13px}
-.it{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line)}
-.it span:last-child{flex:none;font-weight:500;white-space:nowrap}
-.ft{margin:26px 0 0;color:var(--mute);font-size:12px;line-height:1.5}
-.ft a{color:var(--cream)}
-button:focus-visible,a:focus-visible{outline:2px solid var(--cream);outline-offset:2px}
-@media (prefers-reduced-motion:reduce){main{scroll-behavior:auto}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#120d0e">
+  <meta name="description" content="Ementa digital do Sapiens · Café e cozinha.">
+  <title>Sapiens · Ementa digital</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="menu.js"></script>
 </head>
 <body>
-<header><span class="brand">sapiens</span><nav id="nav"></nav><button class="chip" id="lang" aria-label="Português / English"></button></header>
-<main id="main"></main>
-<script>
-/* PT em D, EN em E (mesma ordem). Item PT: "Nome~preço~descrição~v" (v = vegetariano). Em E, null = igual ao PT. */
-var D=[
-{id:"entradas",t:"Entradas",s:[{i:["Sopa do dia~2,50","Tequeños~3,50","Focaccia de queijo~6,00","Ovos rotos com presunto~7,50","Ovos rotos com cogumelos~7,50","Pão de alho com queijo~4,00","Pão de alho com queijo e bacon~5,00"]}]},
-{id:"saladas",t:"Saladas",s:[{n:"Todas as opções podem ser personalizadas. Troca de pão, proteína ou versão vegetariana disponíveis com custo adicional. Consulte os extras.",i:["Frango~13,50~Alface, rúcula, tomate, cenoura, cebola, azeitona, frango, ananás, queijo e croutons","Cogumelos~15,50~Alface, rúcula, tomate, cenoura, cebola, queijo de cabra, nozes, cogumelos portobello e croutons~v","Atum~13,50~Alface, rúcula, tomate, cenoura, cebola, atum, queijo, pimento assado, ananás e croutons"]}]},
-{id:"pregos",t:"Pregos",s:[{n:"Acompanhado de batata frita",i:["Clássico~11,00~Pão de água, bife, queijo e fiambre","3 Pimentas~12,00~Bolo do caco, bife, rúcula, tomate e molho de maionese, mostarda e 3 pimentas","Cogumelos~13,50~Bolo do caco, bife, queijo e cogumelos em molho de natas","Da Serra~13,50~Pão de água, bife, queijo da Serra e cebola caramelizada em redução de vinho do Porto","De Cabra~14,00~Bolo do caco, bife, queijo de cabra, pimento caramelizado, rúcula e cebola frita","Barbecue~12,50~Pão de água, bife, alface, tomate, queijo cheddar, ovo, bacon, cebola frita e molho barbecue","Francesinha~14,00~Bolo do caco, bife, queijo, fiambre, linguiça, salsicha e molho de francesinha","Frango~11,50~Bolo do caco, peito de frango, queijo, tomate, cenoura, alface e molho de mostarda e mel","Vegetariano~13,00~Bolo do caco, cogumelos portobello, queijo de cabra, rúcula, cenoura, nozes e mel~v","Tropical~13,50~Bolo do caco, bife de frango, rúcula, pimento assado, cebola roxa, queijo, bacon, ananás e molho de mostarda e mel","Pimentos~12,50~Bolo do caco, bife, azeitona, rúcula, pimento assado, cebola frita e maionese de alho e ervas","Alheira~15,00~Bolo do caco, alheira com pinhão, rúcula, queijo creme, ovo, maçã e molho de mostarda e mel"]}]},
-{id:"hamburgueres",t:"Hambúrgueres",s:[{n:"Acompanhado de batata frita",i:["Dos Açores~12,50~Pão de hambúrguer, hambúrguer de bovino (150g), queijo cheddar e flamengo, fiambre, alface, tomate, cebola roxa, maionese e ketchup","Black Angus~16,00~Pão de hambúrguer, hambúrguer Black Angus (200g), queijo cheddar, tomate, rúcula, bacon, ovo, cebola frita e molho sweet chilli","Double~15,00~Pão de hambúrguer, dois hambúrgueres de bovino (150g), queijo cheddar, bacon, couve roxa, pickles, alface e maionese de alho e ervas","Recheado~14,00~Pão de hambúrguer alongado, hambúrguer recheado com queijo, fiambre, cebola frita, batata palha, maionese e ketchup","Presunto~14,00~Pão de hambúrguer, hambúrguer de bovino, alface, tomate, cenoura, ananás, queijo cheddar, presunto e molho sweet chilli","Vegan~14,00~Bolo do caco multicereais, hambúrguer vegan, rúcula, tomate, cogumelos e maionese vegan~v"]}]},
-{id:"cachorros",t:"Cachorros",s:[{n:"Acompanhado de batata frita",i:["Simples~10,00~Pão de cachorro em bolo do caco, salsicha, alface, tomate, queijo, fiambre, cebola frita, batata palha, maionese e ketchup","Especial~11,50~Pão de cachorro, salsicha, queijo, fiambre e molho de francesinha","Vegetariano~13,00~Pão de cachorro, salsicha vegan, queijo, alface, tomate, cebola frita, batata palha, maionese e ketchup~v"]}]},
-{id:"prato",t:"No prato",s:[{i:["À Portuguesa~19,00~Bife de alcatra (300g), ovo estrelado, salada, batata frita e pão de alho","Bife Sapiens~18,00~Bife de alcatra (300g), salada, batata frita e pão de alho","Bife Cogumelos~21,00~Bife de alcatra (300g), cogumelos salteados, molho de natas frescas, batata frita e pão de alho"]}]},
-{id:"focaccia",t:"Focaccia",s:[{n:"Acompanhado de batata frita e molho Sapiens: azeite, alho, manjericão, azeitona, cebola, orégãos",i:["De Frango~12,00~Pão de focaccia, pesto, rúcula, queijo, fiambre e bife de frango","De Alcatra~16,00~Pão de focaccia, pesto, rúcula, queijo, fiambre, bife de alcatra e presunto","Vegetariana~13,00~Pão de focaccia, pesto, rúcula, queijo e alheira vegan~v"]}]},
-{id:"infantil",t:"Infantil",s:[{n:"Até aos 12 anos · Acompanhado de batata frita",i:["No prato~8,00~Bife de frango ou hambúrguer de vaca","No pão~8,50~Pão de hambúrguer, bife de frango ou hambúrguer de vaca, queijo e fiambre","Cachorro~8,50~Pão de cachorro, salsicha, queijo e fiambre"]}]},
-{id:"extras",t:"Extras",s:[{i:["Ovo~1,50","Dose de batatas~2,50","Molho de francesinha~2,50","Ingrediente extra~2,00","Extra pão~1,00","Extra vegetariano~7,50","Extra hambúrguer ou bife 120g~7,50"]},{t:"Substituições",i:["Substituição de pão~1,00","Substituição de hambúrguer ou bife~3,00","Substituição para vegetariano~3,00"]}]},
-{id:"cafetaria",t:"Cafetaria",s:[{i:["Café~1,20","Café duplo~2,00","Carioca de café~1,00","Carioca de limão~1,00","Cevada~1,00","Descafeinado~1,20","Pingo~1,20","Abatanado~1,80","Meia de leite~2,00","Chá~2,00"]}]},
-{id:"bebidas",t:"Bebidas",s:[{i:["Água 0,33l~1,00","Água 1,50l~3,00","Água das pedras~1,50","Água das pedras c/ sabores~2,00","Coca-Cola / Zero~2,20","Ice Tea~2,20","Guaraná~2,20","Compal~2,20","7UP~2,20","Ginger Ale~2,20","Água tónica~2,20","Sumo de laranja natural~3,00","Limonada~2,50","Limonada de sabores~3,00"]}]},
-{id:"cerveja",t:"Cerveja",s:[{i:["Fino 25cl~2,00","Rei 50cl~4,00","1927 (Super Bock)~4,00","Somersby~3,00","Stout pressão~2,50","Cerveja s/ álcool~2,50"]},{t:"Artesanal",i:["Franziskaner~6,00","Leffe Blonde~5,00","1927 Munich~4,00","1927 Weiss~4,00","Tough Love End of Time~6,50","Tough Love Imperial Stout~5,00","Tough Love Trip To Andalucía~5,50","Tough Love IPA~5,50"]}]},
-{id:"destilados",t:"Destilados",s:[{t:"Licores",i:["Amêndoa Amarga~3,50","C.R.F.~4,50","Croft~3,00","Licor Beirão~4,00","Martini Bianco~3,00","Martini Rosso~3,00","Vinho do Porto~5,00"]},{t:"Gin",i:["Bombay Sapphire~7,50","Gordon’s~5,00","Tanqueray~8,00"]},{t:"Whiskey",i:["Shot (JB)~3,00","Bushmills~6,00","Jack Daniel’s~7,50","JB~4,00"]}]},
-{id:"vinhos",t:"Vinhos",s:[{t:"Verdes",i:["Muralhas~13,00","Quinta D’Amares~14,00","Sítio do Santo Rosé~10,00","Caiz~12,00"]},{t:"Douro tinto",i:["Entre Quintas~12,00","Teoria Reserva~15,00","Roquette & Cazes~43,00"]},{t:"Douro branco",i:["Vallegre~12,00","Teoria Reserva~15,00","Vale D’Aldeia~18,00","Três Bagos~22,00"]},{t:"Dão tinto",i:["São Simão~18,00"]},{t:"Dão branco",i:["Pinha · Encruzado~14,00"]},{t:"Alentejo tinto",i:["Dez Tostões~25,00"]},{t:"Alentejo branco",i:["Arrepiado Collection~45,00"]},{t:"Alentejo rosé",i:["Caiado Rosé~12,00"]},{t:"Setúbal tinto",i:["Fat Baron~20,00"]},{t:"Espumantes",i:["Terras do Demo Branco~17,00","Terras do Demo Tinto~17,00","Terras do Demo Rosé~17,00","Villa Yolanda Rosé~14,00"]},{t:"Copo",i:["Branco~3,00","Tinto~4,00"]},{t:"Sangrias",n:"Copo | Jarro 1,5L",i:["Branco/tinto~5 | 20","Frutos vermelhos~6 | 22","Maracujá~6 | 22","Limoncello~6 | 22","Aperol Spritz~8 | 27"]}]}
-];
-var E=[
-["Starters",[["","",["Soup of the day","Tequeños","Cheese focaccia","Broken eggs with ham","Broken eggs with mushrooms","Garlic bread with cheese","Garlic bread with cheese and bacon"]]]],
-["Salads",[["","All options can be customized. Bread, protein or vegetarian options available at an additional cost. See extras.",["Chicken~Lettuce, arugula, tomato, carrot, onion, olives, grilled chicken, pineapple, cheese, croutons","Mushrooms~Lettuce, arugula, tomato, carrot, onion, goat cheese, walnuts, portobello mushrooms, croutons","Tuna~Lettuce, arugula, tomato, carrot, onion, tuna, cheese, roasted pepper, pineapple, croutons"]]]],
-["Pregos",[["","Served with fries",["Classic~Water bread, steak, cheese and ham","3 Peppers~Bolo do caco bread, steak, arugula, tomato, mayonnaise and mustard sauce with three peppers","Mushrooms~Bolo do caco bread, steak, cheese and mushrooms in cream sauce","Da Serra~Water bread, steak, Serra cheese and caramelized onion in Port wine reduction","Goat cheese~Bolo do caco bread, steak, goat cheese, caramelized pepper, arugula and fried onion","Barbecue~Water bread, steak, lettuce, tomato, cheddar cheese, egg, bacon, fried onion and barbecue sauce","Francesinha~Bolo do caco bread, steak, cheese, ham, linguiça sausage, sausage and francesinha sauce","Chicken~Bolo do caco bread, grilled chicken breast, cheese, tomato, carrot, lettuce and honey mustard sauce","Vegetarian~Bolo do caco bread, portobello mushrooms, goat cheese, arugula, carrot, walnuts and honey","Tropical~Bolo do caco bread, grilled chicken steak, arugula, roasted pepper, red onion, cheese, bacon, pineapple and honey mustard sauce","Peppers~Bolo do caco bread, steak, olives, arugula, roasted pepper, fried onion and garlic-herb mayo","Alheira~Bolo do caco bread, alheira sausage with pine nuts, arugula, cream cheese, egg, apple and honey mustard sauce"]]]],
-["Burgers",[["","Served with fries",["Dos Açores~Burger bun, beef patty (150g), cheddar and flamengo cheese, ham, lettuce, tomato, red onion, mayo and ketchup","Black Angus~Burger bun, Black Angus patty (200g), cheddar cheese, tomato, arugula, bacon, egg, fried onion and sweet chilli sauce","Double~Burger bun, two beef patties (150g each), cheddar cheese, bacon, red cabbage, pickles, lettuce and garlic-herb mayo","Stuffed~Long burger bun, stuffed beef patty with cheese and ham, fried onion, shoestring potato, mayo and ketchup","Presunto~Bolo do caco bread, beef patty, lettuce, tomato, carrot, pineapple, cheddar cheese, cured ham and sweet chilli sauce","Vegan~Multigrain bolo do caco bread, vegan patty, arugula, tomato, mushrooms and vegan mayo"]]]],
-["Hot dogs",[["","Served with fries",["Simple~Bolo do caco bun, sausage, lettuce, tomato, cheese, ham, fried onion, shoestring potato, mayonnaise and ketchup","Special~Hot dog bun, sausage, cheese, ham and francesinha sauce","Vegetarian~Hot dog bun, vegan sausage, cheese, lettuce, tomato, fried onion, shoestring potato, mayonnaise and ketchup"]]]],
-["Steak dishes",[["","",["Portuguese style~Rump steak (300g), fried egg, salad, fries and garlic bread","Sapiens~Rump steak (300g), salad, fries and garlic bread","Mushroom~Rump steak (300g), sautéed mushrooms, fresh cream sauce, fries and garlic bread"]]]],
-["Focaccia",[["","Served with fries and Sapiens sauce: olive oil, garlic, basil, olives, onion, oregano",["Chicken~Focaccia bread, pesto, arugula, cheese, ham and grilled chicken","Alcatra~Focaccia bread, pesto, arugula, cheese, ham, rump steak and cured ham","Vegetarian~Focaccia bread, pesto, arugula, cheese and vegan alheira sausage"]]]],
-["Kids’ menu",[["","Up to 12 years old · served with fries",["On a plate~Grilled chicken or beef burger patty","In a bun~Burger bun, grilled chicken or beef patty, cheese and ham","Hot dog~Hot dog bun, sausage, cheese and ham"]]]],
-["Extras",[["","",["Fried egg","Side of fries","Francesinha sauce","Extra ingredient","Extra bread","Extra vegetarian","Extra burger or steak 120g"]],["Swaps","",["Swap bread","Swap burger or steak","Swap for vegetarian"]]]],
-["Coffee",[["","",["Expresso","Double Expresso","Carioca de café","Carioca de limão","Barley","Expresso Decaf","Expresso w/ Milk","Large Coffee","Latte","Tea"]]]],
-["Drinks",[["","",["Still water 0,33l","Still water 1,50l","Sparkling water","Sparkling water w/ flavours","Coca-Cola / Zero","Ice Tea","Guaraná","Compal","7UP","Ginger Ale","Tonic water","Fresh orange juice","Lemonade","Flavoured lemonade"]]]],
-["Beer",[["","",["Draft beer 25cl","Draft beer 50cl","1927 (Super Bock)","Somersby","Stout","Non-alcoholic beer"]],["Craft beer","",null]]],
-["Spirits",[["Liquor","",null],["Gin","",null],["Whiskey","",null]]],
-["Wine",[["Green wine","",null],["Douro red","",null],["Douro white","",null],["Dão red","",null],["Dão white","",["Pinha · Encruzado"]],["Alentejo red","",null],["Alentejo white","",null],["Alentejo rosé","",null],["Setúbal red","",null],["Sparkling wines","",["Terras do Demo White","Terras do Demo Red","Terras do Demo Rosé","Villa Yolanda Rosé"]],["Glass","",["White","Red"]],["Sangrias","Glass | 1.5L",["White/Red wine","Berries","Passion fruit","Limoncello","Aperol Spritz"]]]]
-];
-var COL={entradas:"#6b4a1a",saladas:"#3b5a2a",pregos:"#6b2230",hamburgueres:"#7a2a1f",cachorros:"#5a3a1c",prato:"#4b1d3f",focaccia:"#4a5a24",infantil:"#1f4a5c",extras:"#5a3a1c",cafetaria:"#5a3a1c",bebidas:"#1f4a5c",cerveja:"#6b4a1a",destilados:"#4b1d3f",vinhos:"#5b1a26"};
-var UI={pt:{ph:"Aqui entra a foto ou vídeo do prato",veg:"Vegetariano",save:"Guardar prato",cats:"Categorias",sw:"EN",
-ft:'<p class="ft">Os valores incluem IVA. Os produtos são preparados em ambientes não totalmente livres de alergénios: informe-se com a nossa equipa. Livro de reclamações disponível. Reservas: <a href="tel:+351916671941">916 671 941</a> · 12:00–15:00 e 19:00–22:00.</p>'},
-en:{ph:"Dish photo or video goes here",veg:"Vegetarian",save:"Save dish",cats:"Categories",sw:"PT",
-ft:'<p class="ft">All prices include VAT. Our products are prepared in environments that are not completely free of allergens: please ask our team. Complaints book available. Reservations: <a href="tel:+351916671941">916 671 941</a> · Lunch 12:00–15:00, dinner 19:00–22:00.</p>'}};
-var L=/^pt/i.test(navigator.language||"")?"pt":"en",main=document.getElementById("main"),nav=document.getElementById("nav"),liked={};
-try{liked=JSON.parse(localStorage.getItem("liked")||"{}")}catch(x){}
-function e(s){return String(s).replace(/[&<>"]/g,function(m){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]})}
-function pr(s){return s.split(" | ").map(function(x){return x+" €"}).join(" | ")}
-function data(){
-  if(L==="pt")return D;
-  return D.map(function(g,gi){var t=E[gi];return{id:g.id,t:t[0],s:g.s.map(function(b,si){var x=t[1][si];
-    return{t:x[0],n:x[1],i:x[2]?b.i.map(function(r,k){var q=x[2][k].split("~"),p=r.split("~");return[q[0],p[1],q[1]||"",p[3]||""].join("~")}):b.i}})}});
-}
-function render(){
-  var u=UI[L],n=0,out=[];document.documentElement.lang=L;
-  document.getElementById("lang").textContent=u.sw;nav.setAttribute("aria-label",u.cats);
-  data().forEach(function(g,gi){
-    var c=COL[g.id],full=D[gi].s.some(function(b){return b.i.some(function(r){return r.split("~")[2]})});
-    if(full){g.s.forEach(function(b){b.i.forEach(function(r){
-      var p=r.split("~"),k=g.id+":"+(n++);
-      out.push('<section class="sc" data-g="'+g.id+'" style="--c:'+c+'"><div class="glow"></div><div class="photo">'+u.ph+'</div><div class="txt"><h2>'+e(p[0])+'</h2><p class="d">'+e(p[2]||"")+'</p>'+(b.n?'<p class="nt">'+e(b.n)+'</p>':'')+'<div class="row"><span class="price">'+pr(p[1])+'</span><span class="tag">'+(p[3]?'<span class="leaf"></span>'+u.veg:e(g.t))+'</span><button class="heart" data-k="'+k+'" aria-pressed="'+!!liked[k]+'" aria-label="'+u.save+'">♥</button></div></div></section>')})})}
-    else{out.push('<section class="sc" data-g="'+g.id+'" style="--c:'+c+'"><div class="glow"></div><div class="lst"><h2>'+e(g.t)+'</h2>'+g.s.map(function(b){
-      return (b.t?'<h3>'+e(b.t)+'</h3>':'')+(b.n?'<p class="sn">'+e(b.n)+'</p>':'')+b.i.map(function(r){var p=r.split("~");return '<div class="it"><span>'+e(p[0])+'</span><span>'+pr(p[1])+'</span></div>'}).join("")}).join("")+(g.id==="vinhos"?u.ft:'')+'</div></section>')}
-  });
-  main.innerHTML=out.join("");
-  nav.innerHTML=data().map(function(g,k){return '<button class="chip" data-g="'+g.id+'" aria-current="'+(k===0)+'">'+e(g.t)+'</button>'}).join("");
-}
-nav.addEventListener("click",function(ev){var b=ev.target.closest(".chip");if(!b)return;var s=main.querySelector('.sc[data-g="'+b.dataset.g+'"]');if(s)main.scrollTo({top:s.offsetTop,behavior:"smooth"})});
-main.addEventListener("click",function(ev){var h=ev.target.closest(".heart");if(!h)return;var k=h.dataset.k;liked[k]=!liked[k];h.setAttribute("aria-pressed",String(!!liked[k]));try{localStorage.setItem("liked",JSON.stringify(liked))}catch(x){}});
-main.addEventListener("scroll",function(){var s=main.children[Math.round(main.scrollTop/main.clientHeight)];if(!s)return;nav.querySelectorAll(".chip").forEach(function(b){var on=b.dataset.g===s.dataset.g;b.setAttribute("aria-current",String(on));if(on)b.scrollIntoView({inline:"center",block:"nearest"})})});
-document.getElementById("lang").addEventListener("click",function(){L=L==="pt"?"en":"pt";var y=main.scrollTop;render();main.scrollTop=y});
-render();
-</script>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#menu-main" aria-label="Sapiens"><img class="brand-mark" src="assets/sapiens-wordmark.png" alt=""></a>
+      <nav class="category-nav" id="category-nav" aria-label="Categorias da ementa" hidden></nav>
+      <button class="language-toggle" id="language-toggle" type="button" aria-label="Mudar idioma">EN</button>
+    </header>
+    <main class="menu-main" id="menu-main" tabindex="0" aria-label="Ementa digital"></main>
+    <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-fill"></span></div>
+  </div>
 </body>
 </html>
