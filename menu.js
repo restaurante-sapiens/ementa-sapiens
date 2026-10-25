@@ -35,7 +35,7 @@ const menu = [
     { name: "Frango", price: 13.50, image: "assets/dishes/salada-frango.jpg", description: "Alface, rúcula, tomate, cenoura, cebola, azeitona, frango, ananás, queijo e croutons." }, { name: "Cogumelos", price: 15.50, image: "assets/dishes/salada-cogumelos.jpg", description: "Alface, rúcula, tomate, cenoura, cebola, queijo de cabra, nozes, cogumelos portobello e croutons.", tags: ["Vegetariano"] }, { name: "Atum", price: 13.50, description: "Alface, rúcula, tomate, cenoura, cebola, atum, queijo, pimento assado, ananás e croutons." }
   ]},
   { name: "Pregos", note: "Acompanhados de batata frita.", items: [
-    { name: "Clássico", price: 11.50, description: "Pão de água, bife, queijo e fiambre." }, { name: "3 Pimentas", price: 12.00, description: "Bolo do caco, bife, rúcula, tomate e molho de maionese, mostarda e 3 pimentas." }, { name: "Cogumelos", price: 13.50, image: "assets/dishes/prego-cogumelos.jpg", description: "Bolo do caco, bife, queijo e cogumelos em molho de natas." }, { name: "Da Serra", price: 13.50, image: "assets/dishes/prego-da-serra.jpg", description: "Pão de água, bife, queijo da Serra e cebola caramelizada em redução de vinho do Porto." }, { name: "De cabra", price: 14.00, image: "assets/dishes/prego-de-cabra.jpg", description: "Bolo do caco, bife, queijo de cabra, pimento caramelizado, rúcula e cebola frita." }, { name: "Barbecue", price: 13.00, image: "https://sapienspregaria.pt/wp-content/uploads/2024/02/bbq.jpg", description: "Pão de água, bife, alface, tomate, queijo cheddar, ovo, bacon, cebola frita e molho barbecue." }, { name: "Francesinha", price: 14.00, description: "Bolo do caco, bife, queijo, fiambre, linguiça, salsicha e molho de francesinha." }, { name: "Frango", price: 11.50, image: "assets/dishes/prego-frango.jpg", description: "Bolo do caco, peito de frango, queijo, tomate, cenoura, alface e molho de mostarda e mel." }, { name: "Vegetariano", price: 13.00, image: "https://sapienspregaria.pt/wp-content/uploads/2024/02/veggie.jpg", description: "Bolo do caco, cogumelos portobello, queijo de cabra, rúcula, cenoura, nozes e mel.", tags: ["Vegetariano"] }, { name: "Tropical", price: 13.50, image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/8a/cc/d2/prego-tropical-bolo-do.jpg?h=1100&s=1&w=1100", description: "Bolo do caco, bife de frango, rúcula, pimento assado, cebola roxa, queijo, bacon, ananás e molho de mostarda e mel." }, { name: "Pimentos", price: 13.00, image: "assets/dishes/prego-pimentos.jpg", description: "Bolo do caco, bife, azeitona, rúcula, pimento assado, cebola frita e maionese de alho e ervas." }, { name: "Alheira", price: 15.00, image: "assets/dishes/prego-alheira.jpg", description: "Bolo do caco, alheira com pinhão, rúcula, queijo creme, ovo, maçã e molho de mostarda e mel." }
+    { name: "Clássico", price: 11.50, description: "Pão de água, bife, queijo e fiambre." }, { name: "3 Pimentas", price: 12.00, description: "Bolo do caco, bife, rúcula, tomate e molho de maionese, mostarda e 3 pimentas." }, { name: "Cogumelos", price: 13.50, image: "assets/dishes/prego-cogumelos.jpg", description: "Bolo do caco, bife, queijo e cogumelos em molho de natas." }, { name: "Da Serra", price: 13.50, image: "assets/dishes/prego-da-serra.jpg", description: "Pão de água, bife, queijo da Serra e cebola caramelizada em redução de vinho do Porto." }, { name: "De cabra", price: 14.00, image: "assets/dishes/prego-de-cabra.jpg", description: "Bolo do caco, bife, queijo de cabra, pimento caramelizado, rúcula e cebola frita." }, { name: "Barbecue", price: 13.00, image: "https://sapienspregaria.pt/wp-content/uploads/2024/02/bbq.jpg", description: "Pão de água, bife, alface, tomate, queijo cheddar, ovo, bacon, cebola frita e molho barbecue." }, { name: "Francesinha", price: 14.00, video: "assets/videos/francesinha.mp4", description: "Bolo do caco, bife, queijo, fiambre, linguiça, salsicha e molho de francesinha." }, { name: "Frango", price: 11.50, image: "assets/dishes/prego-frango.jpg", description: "Bolo do caco, peito de frango, queijo, tomate, cenoura, alface e molho de mostarda e mel." }, { name: "Vegetariano", price: 13.00, image: "https://sapienspregaria.pt/wp-content/uploads/2024/02/veggie.jpg", description: "Bolo do caco, cogumelos portobello, queijo de cabra, rúcula, cenoura, nozes e mel.", tags: ["Vegetariano"] }, { name: "Tropical", price: 13.50, image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/8a/cc/d2/prego-tropical-bolo-do.jpg?h=1100&s=1&w=1100", description: "Bolo do caco, bife de frango, rúcula, pimento assado, cebola roxa, queijo, bacon, ananás e molho de mostarda e mel." }, { name: "Pimentos", price: 13.00, image: "assets/dishes/prego-pimentos.jpg", description: "Bolo do caco, bife, azeitona, rúcula, pimento assado, cebola frita e maionese de alho e ervas." }, { name: "Alheira", price: 15.00, image: "assets/dishes/prego-alheira.jpg", description: "Bolo do caco, alheira com pinhão, rúcula, queijo creme, ovo, maçã e molho de mostarda e mel." }
   ]},
   { name: "Hambúrgueres", note: "Acompanhados de batata frita.", items: [
     { name: "Dos Açores", price: 12.50, image: "assets/dishes/hamburguer-dos-acores.jpg", description: "Pão de hambúrguer, hambúrguer de bovino (150 g), queijo cheddar e flamengo, fiambre, alface, tomate, cebola roxa, maionese e ketchup." }, { name: "Black Angus", price: 16.00, description: "Pão de hambúrguer, hambúrguer Black Angus (200 g), queijo cheddar, tomate, rúcula, bacon, ovo, cebola frita e molho sweet chilli." }, { name: "Double", price: 15.00, image: "assets/dishes/hamburguer-double.jpg", description: "Pão de hambúrguer, dois hambúrgueres de bovino (150 g), queijo cheddar, bacon, couve roxa, pickles, alface e maionese de alho e ervas." }, { name: "Trufado", price: 15.00, description: "Pão de hambúrguer, hambúrguer de bovino (150 g), alface, tomate, queijo cheddar, bacon, cogumelos e maionese trufada." }, { name: "Presunto", price: 14.00, image: "assets/dishes/hamburguer-presunto.jpg", description: "Pão de hambúrguer, hambúrguer de bovino, alface, tomate, cenoura, ananás, queijo cheddar, presunto e molho sweet chilli." }, { name: "Vegan", price: 14.00, image: "assets/dishes/hamburguer-vegan.jpg", description: "Bolo do caco multicereais, hambúrguer vegan, rúcula, tomate, cogumelos e maionese vegan.", tags: ["Vegan"] }
@@ -44,7 +44,7 @@ const menu = [
     { name: "Simples", price: 10.00, description: "Pão de cachorro em bolo do caco, salsicha, alface, tomate, queijo, fiambre, cebola frita, batata palha, maionese e ketchup." }, { name: "Especial", price: 11.50, image: "assets/dishes/cachorro-especial.jpg", description: "Pão de cachorro, salsicha, queijo, fiambre e molho de francesinha." }, { name: "Vegetariano", price: 13.00, description: "Pão de cachorro, salsicha vegan, queijo, alface, tomate, cebola frita, batata palha, maionese e ketchup.", tags: ["Vegetariano"] }
   ]},
   { name: "No prato", items: [
-    { name: "À Portuguesa", price: 20.00, description: "Bife de alcatra (300 g), ovo estrelado, salada e batata frita." }, { name: "Bife Sapiens", price: 19.00, image: "assets/dishes/bife-sapiens.jpg", description: "Bife de alcatra (300 g), salada e batata frita." }, { name: "Bife Cogumelos", price: 22.00, description: "Bife de alcatra (300 g), cogumelos salteados, molho de natas frescas e batata frita." }, { name: "T-Bone Steak", price: 24.00, description: "T-Bone (300 g), batata frita e salada." }
+    { name: "À Portuguesa", price: 20.00, description: "Bife de alcatra (300 g), ovo estrelado, salada e batata frita." }, { name: "Bife Sapiens", price: 19.00, image: "assets/dishes/bife-sapiens.jpg", description: "Bife de alcatra (300 g), salada e batata frita." }, { name: "Bife Cogumelos", price: 22.00, video: "assets/videos/bife-cogumelos-prato.mp4", description: "Bife de alcatra (300 g), cogumelos salteados, molho de natas frescas e batata frita." }, { name: "T-Bone Steak", price: 24.00, description: "T-Bone (300 g), batata frita e salada." }
   ]},
   { name: "Focaccias", note: "Acompanhadas de batata frita e molho Sapiens: azeite, alho, manjericão, azeitona, cebola e orégãos.", items: [
     { name: "De frango", price: 12.00, description: "Pão de focaccia, pesto, rúcula, queijo, fiambre e bife de frango." }, { name: "De alcatra", price: 16.00, image: "assets/dishes/focaccia-alcatra.jpg", description: "Pão de focaccia, pesto, rúcula, queijo, fiambre, bife de alcatra e presunto." }, { name: "Vegetariana", price: 13.00, description: "Pão de focaccia, pesto, rúcula, queijo e alheira vegan.", tags: ["Vegetariano"] }
@@ -58,10 +58,16 @@ const menu = [
 ];
 
 const categoryNav = document.getElementById("category-nav");
+const categoryMenuToggle = document.getElementById("category-menu-toggle");
+const categoryMenuScrim = document.getElementById("category-menu-scrim");
 const menuMain = document.getElementById("menu-main");
+const mediaLightbox = document.getElementById("media-lightbox");
+const mediaLightboxClose = document.getElementById("media-lightbox-close");
+const mediaLightboxContent = document.getElementById("media-lightbox-content");
 const languageToggle = document.getElementById("language-toggle");
 const scrollProgressFill = document.getElementById("scroll-progress-fill");
 const brandLink = document.querySelector(".brand");
+let socialVideoObserver = null;
 const detailCategories = new Set(["Entradas", "Saladas", "Pregos", "Hambúrgueres", "Cachorros", "No prato", "Focaccias", "Infantil"]);
 const categoryOrder = ["Entradas", "Saladas", "Pregos", "Hambúrgueres", "Cachorros", "No prato", "Focaccias", "Infantil", "Extras", "Cafetaria", "Bebidas", "Cervejas", "Gin", "Licores", "Whiskey", "Vinhos", "Sangrias", "Vídeos", "Informações"];
 const categoryColors = {
@@ -74,7 +80,7 @@ const englishGroups = {
   "Artesanais": "Craft beer", "Tinto": "Red wine", "Branco": "White wine", "Verde": "Vinho Verde", "Verdes": "Vinho Verde", "Douro branco": "Douro white", "Dão branco": "Dão white", "Alentejo branco": "Alentejo white", "Alentejo rosé": "Alentejo rosé", "Douro tinto": "Douro red", "Dão tinto": "Dão red", "Setúbal tinto": "Setúbal red", "Alentejo tinto": "Alentejo red", "Espumantes": "Sparkling wines", "A copo": "By the glass"
 };
 const englishNames = {
-  "No prato|À Portuguesa": "Portuguese style", "Focaccias|De frango": "Chicken", "Focaccias|De alcatra": "Alcatra steak", "Pregos|Clássico": "Classic", "Pregos|De cabra": "Goat cheese", "Pregos|Frango": "Chicken", "Pregos|Vegetariano": "Vegetarian", "Pregos|Pimentos": "Peppers", "Hambúrgueres|Dos Açores": "Dos Açores", "Hambúrgueres|Vegan": "Vegan", "Hambúrgueres|Trufado": "Truffled", "No prato|T-Bone Steak": "T-bone steak", "Cachorros|Simples": "Simple", "Cachorros|Especial": "Special", "Cachorros|Vegetariano": "Vegetarian", "Saladas|Frango": "Chicken", "Saladas|Cogumelos": "Mushrooms", "Saladas|Atum": "Tuna", "Infantil|No prato": "On a plate", "Infantil|No pão": "In a bun", "Infantil|Cachorro": "Hot dog",
+  "No prato|À Portuguesa": "Portuguese style", "No prato|Bife Cogumelos": "Steak with mushrooms", "Focaccias|De frango": "Chicken", "Focaccias|De alcatra": "Alcatra steak", "Pregos|Clássico": "Classic", "Pregos|De cabra": "Goat cheese", "Pregos|Frango": "Chicken", "Pregos|Vegetariano": "Vegetarian", "Pregos|Pimentos": "Peppers", "Hambúrgueres|Dos Açores": "Dos Açores", "Hambúrgueres|Vegan": "Vegan", "Hambúrgueres|Trufado": "Truffled", "No prato|T-Bone Steak": "T-bone steak", "Cachorros|Simples": "Simple", "Cachorros|Especial": "Special", "Cachorros|Vegetariano": "Vegetarian", "Saladas|Frango": "Chicken", "Saladas|Cogumelos": "Mushrooms", "Saladas|Atum": "Tuna", "Infantil|No prato": "On a plate", "Infantil|No pão": "In a bun", "Infantil|Cachorro": "Hot dog",
   "Extras|Dose de batatas": "Side of fries", "Extras|Molho de francesinha": "Francesinha sauce", "Extras|Ingrediente extra": "Extra ingredient", "Extras|Extra pão": "Extra bread", "Extras|Extra vegetariano": "Vegetarian extra", "Extras|Extra hambúrguer ou bife · 120 g": "Extra burger or steak · 120 g", "Extras|Substituição de pão": "Swap bread", "Extras|Substituição de hambúrguer ou bife": "Swap burger or steak", "Extras|Substituição para vegetariano": "Swap for vegetarian", "Extras|Embalagem takeaway": "Takeaway container", "Extras|Saco de papel": "Paper bag",
   "Cafetaria|Café": "Espresso", "Cafetaria|Café duplo": "Double espresso", "Cafetaria|Carioca de café": "Coffee infusion", "Cafetaria|Carioca de limão": "Lemon infusion", "Cafetaria|Cevada": "Barley drink", "Cafetaria|Descafeinado": "Decaf coffee", "Cafetaria|Pingo": "Espresso with a dash of milk", "Cafetaria|Abatanado": "Long black", "Cafetaria|Meia de leite": "Coffee with milk", "Cafetaria|Chá": "Tea",
   "Bebidas|Água 0,50 l": "Still water · 0.5 L", "Bebidas|Água 1,50 l": "Still water · 1.5 L", "Bebidas|Água das Pedras": "Água das Pedras sparkling water", "Bebidas|Água das Pedras com sabores": "Flavoured sparkling water", "Bebidas|Sumo de laranja natural": "Fresh orange juice", "Bebidas|Limonada de sabores": "Flavoured lemonade", "Cervejas|Fino · 25 cl": "Draft beer · 25 cl", "Cervejas|Rei · 50 cl": "Draft beer · 50 cl", "Cervejas|Stout de pressão": "Draft stout", "Cervejas|Cerveja sem álcool": "Non-alcoholic beer", "Sangrias|Branco / tinto": "White / red", "Sangrias|Frutos vermelhos": "Red berries", "Sangrias|Maracujá": "Passion fruit",
@@ -105,6 +111,7 @@ let homeScrollTop = 0;
 let categoryMenuScrollTop = 0;
 let allMenuScrollTop = 0;
 let dishReturnView = "category-list";
+let categoryMenuOpen = false;
 
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, function (char) {
@@ -189,7 +196,8 @@ function renderListSlide(category) {
     rows += "<button class=\"list-item list-item-button\" type=\"button\" data-action=\"open-dish\" data-name=\"" + escapeHtml(category.name) + "\" data-index=\"" + index + "\"><span>" + escapeHtml(itemLabel(category, item)) + "</span><span>" + itemPrice(item) + "</span><span class=\"list-item-arrow\" aria-hidden=\"true\">›</span></button>";
   });
   const note = categoryNote(category);
-  return "<section class=\"menu-slide list-slide\" data-category=\"" + categoryId + "\" data-key=\"" + categoryId + "-list\" style=\"--c:" + slideBackground(category.name) + "\"><div class=\"list-background\"></div><div class=\"list-panel\"><span class=\"list-eyebrow\">SAPIENS · MENU</span><h1 class=\"list-title\">" + escapeHtml(categoryLabel(category)) + "</h1>" + (note ? "<p class=\"list-note\">" + escapeHtml(note) + "</p>" : "") + rows + "</div></section>";
+  const craftFeature = category.name === "Cervejas" ? renderCraftBeerFeature() : "";
+  return "<section class=\"menu-slide list-slide\" data-category=\"" + categoryId + "\" data-key=\"" + categoryId + "-list\" style=\"--c:" + slideBackground(category.name) + "\"><div class=\"list-background\"></div><div class=\"list-panel\"><span class=\"list-eyebrow\">SAPIENS · MENU</span><h1 class=\"list-title\">" + escapeHtml(categoryLabel(category)) + "</h1>" + (note ? "<p class=\"list-note\">" + escapeHtml(note) + "</p>" : "") + craftFeature + rows + "</div></section>";
 }
 function renderHomeSlide() {
   const english = language === "en";
@@ -222,7 +230,40 @@ function renderCategoryMenu(category) {
     rows += "<button class=\"list-item list-item-button\" type=\"button\" data-action=\"open-dish\" data-name=\"" + escapeHtml(category.name) + "\" data-index=\"" + index + "\"><span>" + escapeHtml(itemLabel(category, item)) + "</span><span>" + itemPrice(item) + "</span><span class=\"list-item-arrow\" aria-hidden=\"true\">›</span></button>";
   });
   const note = categoryNote(category);
-  return "<section class=\"menu-slide list-slide category-menu-slide\" data-key=\"" + slug(category.name) + "-menu\" style=\"--c:" + slideBackground(category.name) + "\"><div class=\"list-background\"></div><div class=\"list-panel category-menu-panel\"><button class=\"text-back\" type=\"button\" data-action=\"back-home\">" + back + "</button><span class=\"list-eyebrow\">SAPIENS · MENU</span><h1 class=\"list-title\">" + escapeHtml(categoryLabel(category)) + "</h1>" + (note ? "<p class=\"list-note\">" + escapeHtml(note) + "</p>" : "") + "<p class=\"category-menu-hint\">" + hint + "</p>" + rows + "</div></section>";
+  const craftFeature = category.name === "Cervejas" ? renderCraftBeerFeature() : "";
+  return "<section class=\"menu-slide list-slide category-menu-slide\" data-key=\"" + slug(category.name) + "-menu\" style=\"--c:" + slideBackground(category.name) + "\"><div class=\"list-background\"></div><div class=\"list-panel category-menu-panel\"><button class=\"text-back\" type=\"button\" data-action=\"back-home\">" + back + "</button><span class=\"list-eyebrow\">SAPIENS · MENU</span><h1 class=\"list-title\">" + escapeHtml(categoryLabel(category)) + "</h1>" + (note ? "<p class=\"list-note\">" + escapeHtml(note) + "</p>" : "") + "<p class=\"category-menu-hint\">" + hint + "</p>" + craftFeature + rows + "</div></section>";
+}
+function renderCraftBeerFeature() {
+  const english = language === "en";
+  const heading = english ? "Portuguese craft beer" : "Cervejas artesanais portuguesas";
+  const intro = english ? "Meet the craft breweries featured at Sapiens." : "Descobre as cervejeiras artesanais em destaque no Sapiens.";
+  const brands = [
+    {
+      name: "Tough Love",
+      detail: english ? "Brewed in Esmoriz" : "Produzida em Esmoriz",
+      image: "https://assets.untappd.com/site/brewery_logos/brewery-383517_4097d.jpeg",
+      alt: english ? "Tough Love brewery logo" : "Logótipo da cervejeira Tough Love",
+      url: "https://toughlove.pt/"
+    },
+    {
+      name: "Deuses do Malte",
+      detail: english ? "Portuguese craft brewery" : "Cervejeira artesanal portuguesa",
+      image: "https://static.wixstatic.com/media/f1ae29_72f6198feef74693bbfe1e54e81cc8d5~mv2.png/v1/fill/w_720%2Ch_720%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/LOGOdeusesdomaltePreto.png",
+      alt: "Logótipo Deuses do Malte",
+      url: "https://filomenacarvalho19.wixsite.com/deusesdomalte"
+    },
+    {
+      name: "Burguesa",
+      detail: english ? "Portuguese craft beer" : "Cerveja artesanal portuguesa",
+      image: "https://cdn-shopkit.com/usercontent/burguesa/media/images/square/bf21c63-7-cervejas-copo_2.png",
+      alt: english ? "Burguesa craft beer selection" : "Seleção de cervejas artesanais Burguesa",
+      url: "https://www.burguesa.pt/"
+    }
+  ];
+  const cards = brands.map(function (brand) {
+    return "<a class=\"craft-brand-card\" href=\"" + brand.url + "\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"" + escapeHtml(brand.name + " · " + brand.detail) + "\"><span class=\"craft-brand-image\"><img src=\"" + brand.image + "\" alt=\"" + escapeHtml(brand.alt) + "\" loading=\"lazy\"></span><span class=\"craft-brand-copy\"><strong>" + escapeHtml(brand.name) + "</strong><span>" + escapeHtml(brand.detail) + "</span></span><span class=\"craft-brand-arrow\" aria-hidden=\"true\">↗</span></a>";
+  }).join("");
+  return "<aside class=\"craft-beer-feature\"><div class=\"craft-beer-heading\"><h2>" + heading + "</h2><p>" + intro + "</p></div><div class=\"craft-brand-strip\" aria-label=\"" + (english ? "Craft beer brands" : "Marcas de cerveja artesanal") + "\">" + cards + "</div></aside>";
 }
 function renderInfoSlide() {
   const english = language === "en";
@@ -235,45 +276,176 @@ function renderInfoSlide() {
 }
 function renderVideoSlide() {
   const text = language === "en" ? {
-    eyebrow: "SAPIENS · BEHIND THE MENU",
-    title: "From our kitchen to your table.",
-    body: "See the videos and kitchen moments shared on our official Instagram profile.",
-    action: "Watch videos on Instagram",
+    eyebrow: "SAPIENS · INSIDE THE RESTAURANT",
+    title: "A little closer to Sapiens.",
+    body: "Muted video previews. Tap any square to open the video or photo.",
+    galleryTitle: "Sapiens moments",
+    videoBadge: "Video",
+    photoBadge: "Photo",
+    items: [
+      { type: "video", title: "Steak with mushrooms", src: "assets/videos/bife-cogumelos-prato.mp4" },
+      { type: "photo", title: "Our dining room", src: "assets/space/restaurant-main.jpg" },
+      { type: "video", title: "Tropical", src: "assets/videos/tropical.mp4" },
+      { type: "video", title: "Francesinha", src: "assets/videos/francesinha.mp4" },
+      { type: "photo", title: "A table at Sapiens", src: "assets/space/restaurant-dining.jpg" },
+      { type: "video", title: "Burger A", src: "assets/videos/burger-a.mp4" },
+      { type: "video", title: "Sangria", src: "assets/videos/sangria.mp4" },
+      { type: "video", title: "Sangria de Limoncello", src: "assets/videos/sangria-limoncello.mp4" },
+      { type: "photo", title: "The restaurant", src: "assets/space/restaurant-room.jpg" }
+    ],
+    action: "More videos on Instagram",
     note: "Instagram opens in a new tab."
   } : {
-    eyebrow: "SAPIENS · POR TRÁS DO MENU",
-    title: "Da nossa cozinha para a tua mesa.",
-    body: "Vê os vídeos e alguns momentos da cozinha partilhados no Instagram oficial.",
-    action: "Ver vídeos no Instagram",
+    eyebrow: "SAPIENS · POR DENTRO DO RESTAURANTE",
+    title: "Um pouco mais perto do Sapiens.",
+    body: "Os vídeos passam sem som. Toca num quadrado para abrir o vídeo ou a foto.",
+    galleryTitle: "Momentos Sapiens",
+    videoBadge: "Vídeo",
+    photoBadge: "Foto",
+    items: [
+      { type: "video", title: "Bife Cogumelos", src: "assets/videos/bife-cogumelos-prato.mp4" },
+      { type: "photo", title: "A nossa sala", src: "assets/space/restaurant-main.jpg" },
+      { type: "video", title: "Tropical", src: "assets/videos/tropical.mp4" },
+      { type: "video", title: "Francesinha", src: "assets/videos/francesinha.mp4" },
+      { type: "photo", title: "Uma mesa no Sapiens", src: "assets/space/restaurant-dining.jpg" },
+      { type: "video", title: "Burger A", src: "assets/videos/burger-a.mp4" },
+      { type: "video", title: "Sangria", src: "assets/videos/sangria.mp4" },
+      { type: "video", title: "Sangria de Limoncello", src: "assets/videos/sangria-limoncello.mp4" },
+      { type: "photo", title: "O restaurante", src: "assets/space/restaurant-room.jpg" }
+    ],
+    action: "Mais vídeos no Instagram",
     note: "O Instagram abre num novo separador."
   };
-  return "<section class=\"menu-slide video-slide\" data-category=\"videos\" data-key=\"videos\" style=\"--c:#7a2a1f\"><div class=\"list-background\"></div><div class=\"video-panel\"><span class=\"list-eyebrow\">" + text.eyebrow + "</span><h1 class=\"list-title\">" + text.title + "</h1><p class=\"video-copy\">" + text.body + "</p><a class=\"video-link-card\" href=\"https://www.instagram.com/sapiens_pregaria/reels/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"" + text.action + " · @sapiens_pregaria\"><span class=\"video-mark\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M9 6.75v10.5L17.5 12 9 6.75Z\" fill=\"currentColor\"/></svg></span><span class=\"video-link-text\"><strong>" + text.action + "</strong><small>@sapiens_pregaria</small></span><span class=\"video-link-arrow\" aria-hidden=\"true\">↗</span></a><p class=\"video-note\">" + text.note + "</p></div></section>";
+  const mediaTiles = text.items.map(function (item) {
+    const isVideo = item.type === "video";
+    const badge = isVideo
+      ? "<span class=\"social-tile-badge\" aria-hidden=\"true\">▶</span>"
+      : "<span class=\"social-tile-badge social-tile-photo-badge\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><circle cx=\"8.5\" cy=\"9\" r=\"1.5\" fill=\"currentColor\"/><path d=\"m5 17 5-5 3 3 2-2 4 4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span>";
+    const media = isVideo
+      ? "<video class=\"social-tile-video\" data-src=\"" + item.src + "\" muted loop playsinline preload=\"none\" aria-hidden=\"true\"></video>"
+      : "<img class=\"social-tile-image\" src=\"" + item.src + "\" alt=\"\" loading=\"lazy\">";
+    const typeLabel = isVideo ? text.videoBadge : text.photoBadge;
+    return "<button class=\"social-tile\" type=\"button\" data-action=\"open-media\" data-media-type=\"" + item.type + "\" data-src=\"" + item.src + "\" data-title=\"" + escapeHtml(item.title) + "\" aria-label=\"" + escapeHtml(typeLabel + ": " + item.title) + "\">" + media + badge + "<span class=\"social-tile-caption\">" + escapeHtml(item.title) + "</span></button>";
+  }).join("");
+  return "<section class=\"menu-slide video-slide\" data-category=\"videos\" data-key=\"videos\" style=\"--c:#7a2a1f\"><div class=\"list-background\"></div><div class=\"video-panel\"><span class=\"list-eyebrow\">" + text.eyebrow + "</span><h1 class=\"list-title\">" + text.title + "</h1><p class=\"video-copy\">" + text.body + "</p><section class=\"social-gallery\" aria-label=\"" + text.galleryTitle + "\"><h2 class=\"social-gallery-title\">" + text.galleryTitle + "</h2><div class=\"social-media-grid\">" + mediaTiles + "</div></section><a class=\"video-link-card\" href=\"https://www.instagram.com/sapiens_pregaria/reels/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"" + text.action + " · @sapiens_pregaria\"><span class=\"video-mark\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M9 6.75v10.5L17.5 12 9 6.75Z\" fill=\"currentColor\"/></svg></span><span class=\"video-link-text\"><strong>" + text.action + "</strong><small>@sapiens_pregaria</small></span><span class=\"video-link-arrow\" aria-hidden=\"true\">↗</span></a><p class=\"video-note\">" + text.note + "</p></div></section>";
 }
 function updateLanguageButton() {
   languageToggle.textContent = language === "pt" ? "EN" : "PT";
   languageToggle.setAttribute("aria-label", language === "pt" ? "View menu in English" : "Ver ementa em português");
 }
 function updateActiveCategory() {
-  const slides = Array.from(menuMain.querySelectorAll(".menu-slide"));
-  if (!slides.length) return;
-  const center = menuMain.scrollTop + menuMain.clientHeight / 2;
-  let current = slides[0];
-  let nearest = Infinity;
-  slides.forEach(function (slide) {
-    const slideCenter = slide.offsetTop + slide.offsetHeight / 2;
-    const distance = Math.abs(slideCenter - center);
-    if (distance < nearest) { nearest = distance; current = slide; }
-  });
-  categoryNav.querySelectorAll(".chip").forEach(function (button) {
-    const active = button.dataset.category === current.dataset.category;
+  if (categoryNav.hidden || !categoryNav.classList.contains("is-drawer")) return;
+  let activeCategoryId = "";
+  if (appView === "all-menu") {
+    const slides = Array.from(menuMain.querySelectorAll(".menu-slide"));
+    if (slides.length) {
+      const center = menuMain.scrollTop + menuMain.clientHeight / 2;
+      let current = slides[0];
+      let nearest = Infinity;
+      slides.forEach(function (slide) {
+        const slideCenter = slide.offsetTop + slide.offsetHeight / 2;
+        const distance = Math.abs(slideCenter - center);
+        if (distance < nearest) { nearest = distance; current = slide; }
+      });
+      activeCategoryId = current.dataset.category || "";
+    }
+  } else if (currentCategory) {
+    activeCategoryId = slug(currentCategory.name);
+  } else if (appView === "videos") {
+    activeCategoryId = "videos";
+  } else if (appView === "info") {
+    activeCategoryId = "informacoes";
+  }
+  categoryNav.querySelectorAll(".drawer-item[data-category]").forEach(function (button) {
+    const active = button.dataset.category === activeCategoryId;
     button.setAttribute("aria-current", String(active));
-    if (active) button.scrollIntoView({ inline: "center", block: "nearest" });
+    if (active) button.scrollIntoView({ inline: "nearest", block: "nearest" });
   });
+}
+function setCategoryMenuOpen(open) {
+  categoryMenuOpen = Boolean(open && appView !== "home");
+  categoryNav.hidden = !categoryMenuOpen;
+  categoryNav.classList.toggle("is-open", categoryMenuOpen);
+  categoryMenuScrim.hidden = !categoryMenuOpen;
+  categoryMenuToggle.setAttribute("aria-expanded", String(categoryMenuOpen));
+  const english = language === "en";
+  categoryMenuToggle.setAttribute("aria-label", categoryMenuOpen
+    ? (english ? "Close categories" : "Fechar categorias")
+    : (english ? "Open categories" : "Abrir categorias"));
+  if (categoryMenuOpen) updateActiveCategory();
 }
 function updateScrollProgress() {
   const range = menuMain.scrollHeight - menuMain.clientHeight;
   const progress = range > 0 ? menuMain.scrollTop / range : 0;
   scrollProgressFill.style.transform = "scaleY(" + Math.max(0, Math.min(1, progress)) + ")";
+}
+function canAutoplaySocialPreviews() {
+  const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  return !(connection && connection.saveData) && !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+function startSocialVideoPreview(video) {
+  if (!canAutoplaySocialPreviews()) return;
+  if (video.dataset.loaded !== "true") {
+    video.src = video.dataset.src;
+    video.dataset.loaded = "true";
+  }
+  const playback = video.play();
+  if (playback && typeof playback.catch === "function") playback.catch(function () {});
+}
+function initializeSocialVideoPreviews() {
+  if (socialVideoObserver) socialVideoObserver.disconnect();
+  const videos = menuMain.querySelectorAll(".social-tile-video");
+  if (!videos.length || !("IntersectionObserver" in window)) return;
+  socialVideoObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) startSocialVideoPreview(entry.target);
+      else entry.target.pause();
+    });
+  }, { root: menuMain, rootMargin: "50px 0px", threshold: 0.08 });
+  videos.forEach(function (video) { socialVideoObserver.observe(video); });
+}
+function pauseSocialVideoPreviews() {
+  menuMain.querySelectorAll(".social-tile-video").forEach(function (video) { video.pause(); });
+}
+function resumeVisibleSocialVideoPreviews() {
+  if (!canAutoplaySocialPreviews()) return;
+  const root = menuMain.getBoundingClientRect();
+  menuMain.querySelectorAll(".social-tile-video").forEach(function (video) {
+    const rect = video.getBoundingClientRect();
+    if (rect.bottom > root.top && rect.top < root.bottom && rect.right > root.left && rect.left < root.right) {
+      startSocialVideoPreview(video);
+    }
+  });
+}
+function openGalleryMedia(button) {
+  const type = button.dataset.mediaType;
+  const src = button.dataset.src;
+  const title = button.dataset.title || "";
+  pauseSocialVideoPreviews();
+  mediaLightboxContent.replaceChildren();
+  let media;
+  if (type === "video") {
+    media = document.createElement("video");
+    media.controls = true;
+    media.autoplay = true;
+    media.playsInline = true;
+    media.src = src;
+    media.setAttribute("aria-label", title);
+  } else {
+    media = document.createElement("img");
+    media.src = src;
+    media.alt = title;
+  }
+  media.className = "media-lightbox-media";
+  const caption = document.createElement("p");
+  caption.className = "media-lightbox-caption";
+  caption.textContent = title;
+  mediaLightboxContent.append(media, caption);
+  mediaLightbox.showModal();
+  if (type === "video") {
+    const playback = media.play();
+    if (playback && typeof playback.catch === "function") playback.catch(function () {});
+  }
 }
 function renderCurrentView(restoreKey, restoreScrollTop) {
   let content = "";
@@ -287,19 +459,36 @@ function renderCurrentView(restoreKey, restoreScrollTop) {
   else content = renderHomeSlide();
 
   menuMain.innerHTML = content;
-  categoryNav.hidden = appView !== "all-menu" && appView !== "dishes";
-  if (appView === "dishes" && currentCategory) {
-    categoryNav.innerHTML = "<button class=\"chip back-chip\" type=\"button\" data-action=\"back-category\">← " + escapeHtml(categoryLabel(currentCategory)) + "</button>";
-  } else if (appView === "all-menu") {
-    const homeLabel = language === "en" ? "← Menu" : "← Menu inicial";
-    const homeChip = "<button class=\"chip back-chip\" type=\"button\" data-action=\"home\">" + homeLabel + "</button>";
-    categoryNav.innerHTML = homeChip + menuCategoryNames.concat(["Vídeos", "Informações"]).map(function (name) {
+  categoryMenuOpen = false;
+  categoryMenuToggle.hidden = appView === "home";
+  categoryMenuToggle.setAttribute("aria-expanded", "false");
+  categoryMenuScrim.hidden = true;
+  categoryNav.classList.remove("is-open", "is-drawer", "is-back-nav");
+  categoryNav.hidden = true;
+  if (appView !== "home") {
+    const english = language === "en";
+    const heading = english ? "GO TO" : "IR PARA";
+    const closeLabel = english ? "Close categories" : "Fechar categorias";
+    const isAllMenu = appView === "all-menu";
+    categoryNav.classList.add("is-drawer");
+    const backToCategory = appView === "dishes" && currentCategory
+      ? "<button class=\"chip drawer-item drawer-home\" type=\"button\" data-action=\"back-category\">← " + escapeHtml(categoryLabel(currentCategory)) + "</button>"
+      : "";
+    const initialMenuLabel = english ? "⌂  Main menu" : "⌂  Menu inicial";
+    const viewAllLabel = english ? "View everything" : "Ver tudo";
+    const categoryItems = menuCategoryNames.map(function (name) {
       const categoryId = name === "Informações" ? "informacoes" : slug(name);
       const label = language === "en" ? (englishCategory[name] || name) : name;
-      return "<button class=\"chip\" type=\"button\" data-action=\"jump-category\" data-category=\"" + categoryId + "\" aria-current=\"false\">" + escapeHtml(label) + "</button>";
+      const action = isAllMenu ? "jump-category" : "navigate-category";
+      return "<button class=\"chip drawer-item\" type=\"button\" data-action=\"" + action + "\" data-category=\"" + categoryId + "\" data-name=\"" + escapeHtml(name) + "\" aria-current=\"false\">" + escapeHtml(label) + "</button>";
     }).join("");
-  } else {
-    categoryNav.innerHTML = "";
+    const specialItems = ["Vídeos", "Informações"].map(function (name) {
+      const categoryId = name === "Informações" ? "informacoes" : "videos";
+      const label = language === "en" ? (englishCategory[name] || name) : name;
+      const action = isAllMenu ? "jump-category" : (name === "Informações" ? "open-info" : "open-videos");
+      return "<button class=\"chip drawer-item\" type=\"button\" data-action=\"" + action + "\" data-category=\"" + categoryId + "\" aria-current=\"false\">" + escapeHtml(label) + "</button>";
+    }).join("");
+    categoryNav.innerHTML = "<div class=\"category-drawer-heading\"><span>" + heading + "</span><button class=\"drawer-close\" type=\"button\" data-action=\"close-category-menu\" aria-label=\"" + closeLabel + "\">×</button></div>" + backToCategory + "<button class=\"chip drawer-item drawer-home\" type=\"button\" data-action=\"home\">" + initialMenuLabel + "</button><button class=\"chip drawer-item drawer-home\" type=\"button\" data-action=\"show-all\">" + viewAllLabel + "</button>" + categoryItems + specialItems;
   }
   document.documentElement.lang = language === "pt" ? "pt-PT" : "en";
   updateLanguageButton();
@@ -307,6 +496,7 @@ function renderCurrentView(restoreKey, restoreScrollTop) {
   const targetKey = restoreKey || (appView === "dishes" && currentCategory ? slug(currentCategory.name) + "-" + currentItemIndex : "");
   const target = targetKey ? menuMain.querySelector(".menu-slide[data-key=\"" + targetKey + "\"]") : null;
   menuMain.scrollTop = target ? target.offsetTop : (typeof restoreScrollTop === "number" ? restoreScrollTop : 0);
+  initializeSocialVideoPreviews();
   updateActiveCategory();
   updateScrollProgress();
 }
@@ -314,6 +504,10 @@ function renderCurrentView(restoreKey, restoreScrollTop) {
 function handleAction(button) {
   const action = button.dataset.action;
   const name = button.dataset.name;
+  if (action === "open-media") {
+    openGalleryMedia(button);
+    return;
+  }
   let restoreScrollTop;
   if (action === "home" || action === "back-home") {
     appView = "home";
@@ -324,6 +518,9 @@ function handleAction(button) {
     appView = "all-menu";
   } else if (action === "open-category") {
     homeScrollTop = menuMain.scrollTop;
+    currentCategory = categoryByName.get(name);
+    appView = currentCategory ? "category-list" : "home";
+  } else if (action === "navigate-category") {
     currentCategory = categoryByName.get(name);
     appView = currentCategory ? "category-list" : "home";
   } else if (action === "open-dish") {
@@ -354,12 +551,36 @@ brandLink.addEventListener("click", function (event) {
 categoryNav.addEventListener("click", function (event) {
   const button = event.target.closest("button[data-action]");
   if (!button) return;
+  if (button.dataset.action === "close-category-menu") {
+    setCategoryMenuOpen(false);
+    return;
+  }
   if (button.dataset.action === "jump-category") {
+    setCategoryMenuOpen(false);
     const target = menuMain.querySelector(".menu-slide[data-category=\"" + button.dataset.category + "\"]");
     if (target) menuMain.scrollTo({ top: target.offsetTop, behavior: "smooth" });
     return;
   }
   handleAction(button);
+});
+categoryMenuToggle.addEventListener("click", function () {
+  setCategoryMenuOpen(!categoryMenuOpen);
+});
+categoryMenuScrim.addEventListener("click", function () {
+  setCategoryMenuOpen(false);
+});
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && categoryMenuOpen) setCategoryMenuOpen(false);
+});
+mediaLightboxClose.addEventListener("click", function () {
+  mediaLightbox.close();
+});
+mediaLightbox.addEventListener("click", function (event) {
+  if (event.target === mediaLightbox) mediaLightbox.close();
+});
+mediaLightbox.addEventListener("close", function () {
+  mediaLightboxContent.replaceChildren();
+  resumeVisibleSocialVideoPreviews();
 });
 menuMain.addEventListener("click", function (event) {
   const button = event.target.closest("button[data-action]");

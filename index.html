@@ -13,11 +13,19 @@
   <div class="app-shell">
     <header class="topbar">
       <a class="brand" href="#menu-main" aria-label="Sapiens"><img class="brand-mark" src="assets/sapiens-wordmark.png" alt=""></a>
+      <button class="category-menu-toggle" id="category-menu-toggle" type="button" aria-label="Abrir categorias" aria-controls="category-nav" aria-expanded="false" hidden>
+        <span></span><span></span><span></span>
+      </button>
       <nav class="category-nav" id="category-nav" aria-label="Categorias da ementa" hidden></nav>
       <button class="language-toggle" id="language-toggle" type="button" aria-label="Mudar idioma">EN</button>
     </header>
+    <button class="category-menu-scrim" id="category-menu-scrim" type="button" aria-label="Fechar categorias" hidden></button>
     <main class="menu-main" id="menu-main" tabindex="0" aria-label="Ementa digital"></main>
     <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-fill"></span></div>
+    <dialog class="media-lightbox" id="media-lightbox" aria-label="Pré-visualização">
+      <button class="media-lightbox-close" id="media-lightbox-close" type="button" aria-label="Fechar">×</button>
+      <div class="media-lightbox-content" id="media-lightbox-content"></div>
+    </dialog>
   </div>
 </body>
 </html>
