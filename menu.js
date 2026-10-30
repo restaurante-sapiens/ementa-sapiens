@@ -26,7 +26,7 @@ const menu = [
     { name: "Branco", price: 3.00, group: "A copo" }, { name: "Tinto", price: 4.00, group: "A copo" }
   ]},
   { name: "Sangrias", items: [
-    { name: "Branco / tinto", prices: [{ label: "Copo", amount: 5.00 }, { label: "1,5 l", amount: 20.00 }] }, { name: "Frutos vermelhos", prices: [{ label: "Copo", amount: 6.00 }, { label: "1,5 l", amount: 22.00 }], image: "assets/dishes/sangria-frutos-vermelhos.jpg" }, { name: "Maracujá", prices: [{ label: "Copo", amount: 6.00 }, { label: "1,5 l", amount: 22.00 }] }, { name: "Limoncello", prices: [{ label: "Copo", amount: 6.00 }, { label: "1,5 l", amount: 22.00 }], video: "assets/videos/sangria-limoncello.mp4" }, { name: "Aperol", prices: [{ label: "Copo", amount: 8.00 }, { label: "1,5 l", amount: 27.00 }] }
+    { name: "Branco / tinto", prices: [{ label: "Copo", amount: 5.00 }, { label: "1,5 l", amount: 20.00 }] }, { name: "Frutos vermelhos", prices: [{ label: "Copo", amount: 6.00 }, { label: "1,5 l", amount: 22.00 }], image: "assets/dishes/sangria-frutos-vermelhos.jpg" }, { name: "Maracujá", prices: [{ label: "Copo", amount: 6.00 }, { label: "1,5 l", amount: 22.00 }] }, { name: "Limoncello", prices: [{ label: "Copo", amount: 6.00 }, { label: "1,5 l", amount: 22.00 }], video: "assets/videos/sangria-limoncello.mp4", poster: "assets/video-posters/sangria-limoncello.jpg" }, { name: "Aperol", prices: [{ label: "Copo", amount: 8.00 }, { label: "1,5 l", amount: 27.00 }] }
   ]},
   { name: "Entradas", items: [
     { name: "Sopa do dia", price: 2.50, image: "assets/dishes/sopa-generica.jpg", imageAlt: { pt: "Creme de cenoura ilustrativo; a sopa do dia pode variar.", en: "Illustrative carrot soup; the soup of the day may vary." }, imageCredit: { pt: "Imagem ilustrativa · a sopa pode variar", en: "Illustrative image · soup may vary" } }, { name: "Tequeños", price: 4.00, image: "assets/dishes/tequenos.jpg" }, { name: "Focaccia de queijo", price: 6.00, image: "assets/dishes/focaccia-queijo.jpg" }, { name: "Ovos rotos com presunto", price: 8.00, image: "assets/dishes/ovos-rotos-presunto.jpg" }, { name: "Ovos rotos com cogumelos", price: 8.00, image: "assets/dishes/ovos-rotos-cogumelos.jpg" }, { name: "Pão de alho com queijo", price: 4.00 }, { name: "Pão de alho com queijo e bacon", price: 5.00, image: "assets/dishes/pao-alho-queijo-bacon.jpg" }
@@ -35,7 +35,7 @@ const menu = [
     { name: "Frango", price: 13.50, image: "assets/dishes/salada-frango.jpg", description: "Alface, rúcula, tomate, cenoura, cebola, azeitona, frango, ananás, queijo e croutons." }, { name: "Cogumelos", price: 15.50, image: "assets/dishes/salada-cogumelos.jpg", description: "Alface, rúcula, tomate, cenoura, cebola, queijo de cabra, nozes, cogumelos portobello e croutons.", tags: ["Vegetariano"] }, { name: "Atum", price: 13.50, description: "Alface, rúcula, tomate, cenoura, cebola, atum, queijo, pimento assado, ananás e croutons." }
   ]},
   { name: "Pregos", note: "Acompanhados de batata frita.", items: [
-    { name: "Clássico", price: 11.50, image: "assets/dishes/prego-classico.jpg", description: "Pão de água, bife, queijo e fiambre." }, { name: "3 Pimentas", price: 12.00, image: "assets/dishes/prego-3-pimentas.jpg", description: "Bolo do caco, bife, rúcula, tomate e molho de maionese, mostarda e 3 pimentas." }, { name: "Cogumelos", price: 13.50, image: "assets/dishes/prego-cogumelos.jpg", description: "Bolo do caco, bife, queijo e cogumelos em molho de natas." }, { name: "Da Serra", price: 13.50, image: "assets/dishes/prego-da-serra.jpg", description: "Pão de água, bife, queijo da Serra e cebola caramelizada em redução de vinho do Porto." }, { name: "De cabra", price: 14.00, image: "assets/dishes/prego-de-cabra.jpg", description: "Bolo do caco, bife, queijo de cabra, pimento caramelizado, rúcula e cebola frita." }, { name: "Barbecue", price: 13.00, image: "assets/dishes/prego-barbecue.jpg", description: "Pão de água, bife, alface, tomate, queijo cheddar, ovo, bacon, cebola frita e molho barbecue." }, { name: "Francesinha", price: 14.00, video: "assets/videos/francesinha.mp4", description: "Bolo do caco, bife, queijo, fiambre, linguiça, salsicha e molho de francesinha." }, { name: "Frango", price: 11.50, image: "assets/dishes/prego-frango.jpg", description: "Bolo do caco, peito de frango, queijo, tomate, cenoura, alface e molho de mostarda e mel." }, { name: "Vegetariano", price: 13.00, image: "assets/dishes/prego-vegetariano.jpg", description: "Bolo do caco, cogumelos portobello, queijo de cabra, rúcula, cenoura, nozes e mel.", tags: ["Vegetariano"] }, { name: "Tropical", price: 13.50, image: "assets/dishes/prego-tropical.jpg", imageCredit: { pt: "Foto de visitante · Tripadvisor", en: "Guest photo · Tripadvisor" }, description: "Bolo do caco, bife de frango, rúcula, pimento assado, cebola roxa, queijo, bacon, ananás e molho de mostarda e mel." }, { name: "Pimentos", price: 13.00, image: "assets/dishes/prego-pimentos.jpg", description: "Bolo do caco, bife, azeitona, rúcula, pimento assado, cebola frita e maionese de alho e ervas." }, { name: "Alheira", price: 15.00, image: "assets/dishes/prego-alheira.jpg", description: "Bolo do caco, alheira com pinhão, rúcula, queijo creme, ovo, maçã e molho de mostarda e mel." }
+    { name: "Clássico", price: 11.50, image: "assets/dishes/prego-classico.jpg", description: "Pão de água, bife, queijo e fiambre." }, { name: "3 Pimentas", price: 12.00, image: "assets/dishes/prego-3-pimentas.jpg", description: "Bolo do caco, bife, rúcula, tomate e molho de maionese, mostarda e 3 pimentas." }, { name: "Cogumelos", price: 13.50, image: "assets/dishes/prego-cogumelos.jpg", description: "Bolo do caco, bife, queijo e cogumelos em molho de natas." }, { name: "Da Serra", price: 13.50, image: "assets/dishes/prego-da-serra.jpg", description: "Pão de água, bife, queijo da Serra e cebola caramelizada em redução de vinho do Porto." }, { name: "De cabra", price: 14.00, image: "assets/dishes/prego-de-cabra.jpg", description: "Bolo do caco, bife, queijo de cabra, pimento caramelizado, rúcula e cebola frita." }, { name: "Barbecue", price: 13.00, image: "assets/dishes/prego-barbecue.jpg", description: "Pão de água, bife, alface, tomate, queijo cheddar, ovo, bacon, cebola frita e molho barbecue." }, { name: "Francesinha", price: 14.00, video: "assets/videos/francesinha.mp4", poster: "assets/dishes/prego-francesinha-frame.jpg", description: "Bolo do caco, bife, queijo, fiambre, linguiça, salsicha e molho de francesinha." }, { name: "Frango", price: 11.50, image: "assets/dishes/prego-frango.jpg", description: "Bolo do caco, peito de frango, queijo, tomate, cenoura, alface e molho de mostarda e mel." }, { name: "Vegetariano", price: 13.00, image: "assets/dishes/prego-vegetariano.jpg", description: "Bolo do caco, cogumelos portobello, queijo de cabra, rúcula, cenoura, nozes e mel.", tags: ["Vegetariano"] }, { name: "Tropical", price: 13.50, image: "assets/dishes/prego-tropical.jpg", imageCredit: { pt: "Foto de visitante · Tripadvisor", en: "Guest photo · Tripadvisor" }, description: "Bolo do caco, bife de frango, rúcula, pimento assado, cebola roxa, queijo, bacon, ananás e molho de mostarda e mel." }, { name: "Pimentos", price: 13.00, image: "assets/dishes/prego-pimentos.jpg", description: "Bolo do caco, bife, azeitona, rúcula, pimento assado, cebola frita e maionese de alho e ervas." }, { name: "Alheira", price: 15.00, image: "assets/dishes/prego-alheira.jpg", description: "Bolo do caco, alheira com pinhão, rúcula, queijo creme, ovo, maçã e molho de mostarda e mel." }
   ]},
   { name: "Hambúrgueres", note: "Acompanhados de batata frita.", items: [
     { name: "Dos Açores", price: 12.50, image: "assets/dishes/hamburguer-dos-acores.jpg", description: "Pão de hambúrguer, hambúrguer de bovino (150 g), queijo cheddar e flamengo, fiambre, alface, tomate, cebola roxa, maionese e ketchup." }, { name: "Black Angus", price: 16.00, image: "assets/dishes/hamburguer-black-angus.jpg", description: "Pão de hambúrguer, hambúrguer Black Angus (200 g), queijo cheddar, tomate, rúcula, bacon, ovo, cebola frita e molho sweet chilli." }, { name: "Double", price: 15.00, image: "assets/dishes/hamburguer-double.jpg", description: "Pão de hambúrguer, dois hambúrgueres de bovino (150 g), queijo cheddar, bacon, couve roxa, pickles, alface e maionese de alho e ervas." }, { name: "Trufado", price: 15.00, description: "Pão de hambúrguer, hambúrguer de bovino (150 g), alface, tomate, queijo cheddar, bacon, cogumelos e maionese trufada." }, { name: "Presunto", price: 14.00, image: "assets/dishes/hamburguer-presunto.jpg", description: "Pão de hambúrguer, hambúrguer de bovino, alface, tomate, cenoura, ananás, queijo cheddar, presunto e molho sweet chilli." }, { name: "Vegan", price: 14.00, image: "assets/dishes/hamburguer-vegan.jpg", description: "Bolo do caco multicereais, hambúrguer vegan, rúcula, tomate, cogumelos e maionese vegan.", tags: ["Vegan"] }
@@ -44,7 +44,7 @@ const menu = [
     { name: "Simples", price: 10.00, description: "Pão de cachorro em bolo do caco, salsicha, alface, tomate, queijo, fiambre, cebola frita, batata palha, maionese e ketchup." }, { name: "Especial", price: 11.50, image: "assets/dishes/cachorro-especial.jpg", description: "Pão de cachorro, salsicha, queijo, fiambre e molho de francesinha." }, { name: "Vegetariano", price: 13.00, description: "Pão de cachorro, salsicha vegan, queijo, alface, tomate, batata palha, maionese e ketchup.", tags: ["Vegetariano"] }
   ]},
   { name: "No prato", items: [
-    { name: "À Portuguesa", price: 20.00, image: "assets/dishes/prato-a-portuguesa.jpg", description: "Bife de alcatra (300 g), ovo estrelado, salada e batata frita." }, { name: "Bife Sapiens", price: 19.00, image: "assets/dishes/bife-sapiens.jpg", description: "Bife de alcatra (300 g), salada e batata frita." }, { name: "Bife Cogumelos", price: 22.00, video: "assets/videos/bife-cogumelos-prato.mp4", description: "Bife de alcatra (300 g), cogumelos salteados, molho de natas frescas e batata frita." }, { name: "T-Bone Steak", price: 24.00, description: "T-Bone (300 g), batata frita e salada." }
+    { name: "À Portuguesa", price: 20.00, image: "assets/dishes/prato-a-portuguesa.jpg", description: "Bife de alcatra (300 g), ovo estrelado, salada e batata frita." }, { name: "Bife Sapiens", price: 19.00, image: "assets/dishes/bife-sapiens.jpg", description: "Bife de alcatra (300 g), salada e batata frita." }, { name: "Bife Cogumelos", price: 22.00, video: "assets/videos/bife-cogumelos-prato.mp4", poster: "assets/video-posters/bife-cogumelos-prato.jpg", description: "Bife de alcatra (300 g), cogumelos salteados, molho de natas frescas e batata frita." }, { name: "T-Bone Steak", price: 24.00, description: "T-Bone (300 g), batata frita e salada." }
   ]},
   { name: "Focaccias", note: "Acompanhadas de batata frita e molho Sapiens: azeite, alho, manjericão, azeitona, cebola e orégãos.", items: [
     { name: "De frango", price: 12.00, description: "Pão de focaccia, pesto, rúcula, queijo, fiambre e bife de frango." }, { name: "De alcatra", price: 16.00, image: "assets/dishes/focaccia-alcatra.jpg", description: "Pão de focaccia, pesto, rúcula, queijo, fiambre, bife de alcatra e presunto." }, { name: "Vegetariana", price: 13.00, description: "Pão de focaccia, pesto, rúcula, queijo e alheira vegan.", tags: ["Vegetariano"] }
@@ -116,7 +116,24 @@ const landingCategoryGroups = [
   { title: "Para fechar", englishTitle: "Something sweet", description: "Sobremesas", englishDescription: "Desserts", featuredCategories: [
     { name: "Sobremesas", image: "assets/dishes/bolo-bolacha.jpg", eyebrow: "UM FINAL DOCE", englishEyebrow: "A SWEET FINISH", detail: "Bolo, mousses e cheesecake", englishDetail: "Cake, mousses and cheesecake" }
   ], categories: [] }
-];
+ ];
+const landingCategoryImages = {
+  "Entradas": "assets/dishes/ovos-rotos-presunto.jpg",
+  "Saladas": "assets/dishes/salada-frango.jpg",
+  "Pregos": "assets/dishes/prego-classico.jpg",
+  "Hambúrgueres": "assets/dishes/hamburguer-black-angus.jpg",
+  "Cachorros": "assets/dishes/cachorro-especial.jpg",
+  "No prato": "assets/dishes/prato-a-portuguesa.jpg",
+  "Focaccias": "assets/dishes/focaccia-alcatra.jpg",
+  "Infantil": "assets/dishes/hamburguer-dos-acores.jpg",
+  "Extras": "assets/dishes/pao-alho-queijo-bacon.jpg",
+  "Bebidas": "assets/video-posters/sangria-limoncello.jpg",
+  "Vinhos": "assets/dishes/vinho-sitio-santo-rose.jpg",
+  "Gin": "assets/categories/gordons.jpg",
+  "Licores": "assets/categories/licor-beirao.jpg",
+  "Whiskey": "assets/categories/logan.jpg",
+  "Cafetaria": "assets/categories/cafe.jpg"
+};
 let language = /^pt/i.test(navigator.language || "") ? "pt" : "en";
 let appView = "home";
 let currentCategory = null;
@@ -256,7 +273,9 @@ function renderLandingCategoryGroup(group) {
     const category = categoryByName.get(name);
     if (!category) return "";
     const secondary = name === "Cafetaria" ? " landing-category-option-muted" : "";
-    return "<button class=\"landing-category-option" + secondary + "\" type=\"button\" data-action=\"open-category\" data-name=\"" + escapeHtml(name) + "\"><span>" + escapeHtml(categoryLabel(category)) + "</span><span class=\"landing-category-arrow\" aria-hidden=\"true\">" + arrowIcon("external") + "</span></button>";
+    const productPhoto = new Set(["Gin", "Licores", "Whiskey"]).has(name);
+    const image = landingCategoryImages[name];
+    return "<button class=\"landing-category-option has-image" + (productPhoto ? " landing-category-option-product" : "") + secondary + "\" type=\"button\" data-action=\"open-category\" data-name=\"" + escapeHtml(name) + "\"><span class=\"landing-category-media\"><img src=\"" + escapeHtml(image || "assets/space/restaurant-main.jpg") + "\" alt=\"\" loading=\"lazy\"></span><span class=\"landing-category-overlay\"></span><span class=\"landing-category-label\">" + escapeHtml(categoryLabel(category)) + "</span><span class=\"landing-category-arrow\" aria-hidden=\"true\">" + arrowIcon("external") + "</span></button>";
   }).join("");
   const features = (group.featuredCategories || []).map(function (feature) {
     const category = categoryByName.get(feature.name);
@@ -345,14 +364,14 @@ function renderVideoSlide() {
     videoBadge: "Video",
     photoBadge: "Photo",
     items: [
-      { type: "video", title: "Steak with mushrooms", src: "assets/videos/bife-cogumelos-prato.mp4" },
+      { type: "video", title: "Steak with mushrooms", src: "assets/videos/bife-cogumelos-prato.mp4", poster: "assets/video-posters/bife-cogumelos-prato.jpg" },
       { type: "photo", title: "Our dining room", src: "assets/space/restaurant-main.jpg" },
-      { type: "video", title: "Tropical", src: "assets/videos/tropical.mp4" },
+      { type: "video", title: "Tropical", src: "assets/videos/tropical.mp4", poster: "assets/video-posters/tropical.jpg" },
       { type: "video", title: "Francesinha", src: "assets/videos/francesinha.mp4", poster: "assets/dishes/prego-francesinha-frame.jpg" },
       { type: "photo", title: "A table at Sapiens", src: "assets/space/restaurant-dining.jpg" },
-      { type: "video", title: "Burger A", src: "assets/videos/burger-a.mp4" },
-      { type: "video", title: "Sangria", src: "assets/videos/sangria.mp4" },
-      { type: "video", title: "Sangria de Limoncello", src: "assets/videos/sangria-limoncello.mp4" },
+      { type: "video", title: "Burger A", src: "assets/videos/burger-a.mp4", poster: "assets/video-posters/burger-a.jpg" },
+      { type: "video", title: "Sangria", src: "assets/videos/sangria.mp4", poster: "assets/video-posters/sangria.jpg" },
+      { type: "video", title: "Sangria de Limoncello", src: "assets/videos/sangria-limoncello.mp4", poster: "assets/video-posters/sangria-limoncello.jpg" },
       { type: "photo", title: "The restaurant", src: "assets/space/restaurant-room.jpg" }
     ],
     action: "More videos on Instagram",
@@ -365,14 +384,14 @@ function renderVideoSlide() {
     videoBadge: "Vídeo",
     photoBadge: "Foto",
     items: [
-      { type: "video", title: "Bife Cogumelos", src: "assets/videos/bife-cogumelos-prato.mp4" },
+      { type: "video", title: "Bife Cogumelos", src: "assets/videos/bife-cogumelos-prato.mp4", poster: "assets/video-posters/bife-cogumelos-prato.jpg" },
       { type: "photo", title: "A nossa sala", src: "assets/space/restaurant-main.jpg" },
-      { type: "video", title: "Tropical", src: "assets/videos/tropical.mp4" },
+      { type: "video", title: "Tropical", src: "assets/videos/tropical.mp4", poster: "assets/video-posters/tropical.jpg" },
       { type: "video", title: "Francesinha", src: "assets/videos/francesinha.mp4", poster: "assets/dishes/prego-francesinha-frame.jpg" },
       { type: "photo", title: "Uma mesa no Sapiens", src: "assets/space/restaurant-dining.jpg" },
-      { type: "video", title: "Burger A", src: "assets/videos/burger-a.mp4" },
-      { type: "video", title: "Sangria", src: "assets/videos/sangria.mp4" },
-      { type: "video", title: "Sangria de Limoncello", src: "assets/videos/sangria-limoncello.mp4" },
+      { type: "video", title: "Burger A", src: "assets/videos/burger-a.mp4", poster: "assets/video-posters/burger-a.jpg" },
+      { type: "video", title: "Sangria", src: "assets/videos/sangria.mp4", poster: "assets/video-posters/sangria.jpg" },
+      { type: "video", title: "Sangria de Limoncello", src: "assets/videos/sangria-limoncello.mp4", poster: "assets/video-posters/sangria-limoncello.jpg" },
       { type: "photo", title: "O restaurante", src: "assets/space/restaurant-room.jpg" }
     ],
     action: "Mais vídeos no Instagram",
