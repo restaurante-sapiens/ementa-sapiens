@@ -35,7 +35,7 @@ const menu = [
     { name: "Frango", price: 13.50, image: "assets/dishes/salada-frango.jpg", description: "Alface, rúcula, tomate, cenoura, cebola, azeitona, frango, ananás, queijo e croutons." }, { name: "Cogumelos", price: 15.50, image: "assets/dishes/salada-cogumelos.jpg", description: "Alface, rúcula, tomate, cenoura, cebola, queijo de cabra, nozes, cogumelos portobello e croutons.", tags: ["Vegetariano"] }, { name: "Atum", price: 13.50, description: "Alface, rúcula, tomate, cenoura, cebola, atum, queijo, pimento assado, ananás e croutons." }
   ]},
   { name: "Pregos", note: "Acompanhados de batata frita.", items: [
-    { name: "Clássico", price: 11.50, image: "assets/dishes/prego-classico.jpg", description: "Pão de água, bife, queijo e fiambre." }, { name: "3 Pimentas", price: 12.00, image: "assets/dishes/prego-3-pimentas.jpg", description: "Bolo do caco, bife, rúcula, tomate e molho de maionese, mostarda e 3 pimentas." }, { name: "Cogumelos", price: 13.50, image: "assets/dishes/prego-cogumelos.jpg", description: "Bolo do caco, bife, queijo e cogumelos em molho de natas." }, { name: "Da Serra", price: 13.50, image: "assets/dishes/prego-da-serra.jpg", description: "Pão de água, bife, queijo da Serra e cebola caramelizada em redução de vinho do Porto." }, { name: "De cabra", price: 14.00, image: "assets/dishes/prego-de-cabra.jpg", description: "Bolo do caco, bife, queijo de cabra, pimento caramelizado, rúcula e cebola frita." }, { name: "Barbecue", price: 13.00, image: "https://sapienspregaria.pt/wp-content/uploads/2024/02/bbq.jpg", description: "Pão de água, bife, alface, tomate, queijo cheddar, ovo, bacon, cebola frita e molho barbecue." }, { name: "Francesinha", price: 14.00, video: "assets/videos/francesinha.mp4", description: "Bolo do caco, bife, queijo, fiambre, linguiça, salsicha e molho de francesinha." }, { name: "Frango", price: 11.50, image: "assets/dishes/prego-frango.jpg", description: "Bolo do caco, peito de frango, queijo, tomate, cenoura, alface e molho de mostarda e mel." }, { name: "Vegetariano", price: 13.00, image: "https://sapienspregaria.pt/wp-content/uploads/2024/02/veggie.jpg", description: "Bolo do caco, cogumelos portobello, queijo de cabra, rúcula, cenoura, nozes e mel.", tags: ["Vegetariano"] }, { name: "Tropical", price: 13.50, image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/8a/cc/d2/prego-tropical-bolo-do.jpg?h=1100&s=1&w=1100", description: "Bolo do caco, bife de frango, rúcula, pimento assado, cebola roxa, queijo, bacon, ananás e molho de mostarda e mel." }, { name: "Pimentos", price: 13.00, image: "assets/dishes/prego-pimentos.jpg", description: "Bolo do caco, bife, azeitona, rúcula, pimento assado, cebola frita e maionese de alho e ervas." }, { name: "Alheira", price: 15.00, image: "assets/dishes/prego-alheira.jpg", description: "Bolo do caco, alheira com pinhão, rúcula, queijo creme, ovo, maçã e molho de mostarda e mel." }
+    { name: "Clássico", price: 11.50, image: "assets/dishes/prego-classico.jpg", description: "Pão de água, bife, queijo e fiambre." }, { name: "3 Pimentas", price: 12.00, image: "assets/dishes/prego-3-pimentas.jpg", description: "Bolo do caco, bife, rúcula, tomate e molho de maionese, mostarda e 3 pimentas." }, { name: "Cogumelos", price: 13.50, image: "assets/dishes/prego-cogumelos.jpg", description: "Bolo do caco, bife, queijo e cogumelos em molho de natas." }, { name: "Da Serra", price: 13.50, image: "assets/dishes/prego-da-serra.jpg", description: "Pão de água, bife, queijo da Serra e cebola caramelizada em redução de vinho do Porto." }, { name: "De cabra", price: 14.00, image: "assets/dishes/prego-de-cabra.jpg", description: "Bolo do caco, bife, queijo de cabra, pimento caramelizado, rúcula e cebola frita." }, { name: "Barbecue", price: 13.00, image: "assets/dishes/prego-barbecue.jpg", description: "Pão de água, bife, alface, tomate, queijo cheddar, ovo, bacon, cebola frita e molho barbecue." }, { name: "Francesinha", price: 14.00, video: "assets/videos/francesinha.mp4", description: "Bolo do caco, bife, queijo, fiambre, linguiça, salsicha e molho de francesinha." }, { name: "Frango", price: 11.50, image: "assets/dishes/prego-frango.jpg", description: "Bolo do caco, peito de frango, queijo, tomate, cenoura, alface e molho de mostarda e mel." }, { name: "Vegetariano", price: 13.00, image: "assets/dishes/prego-vegetariano.jpg", description: "Bolo do caco, cogumelos portobello, queijo de cabra, rúcula, cenoura, nozes e mel.", tags: ["Vegetariano"] }, { name: "Tropical", price: 13.50, image: "assets/dishes/prego-tropical.jpg", imageCredit: { pt: "Foto de visitante · Tripadvisor", en: "Guest photo · Tripadvisor" }, description: "Bolo do caco, bife de frango, rúcula, pimento assado, cebola roxa, queijo, bacon, ananás e molho de mostarda e mel." }, { name: "Pimentos", price: 13.00, image: "assets/dishes/prego-pimentos.jpg", description: "Bolo do caco, bife, azeitona, rúcula, pimento assado, cebola frita e maionese de alho e ervas." }, { name: "Alheira", price: 15.00, image: "assets/dishes/prego-alheira.jpg", description: "Bolo do caco, alheira com pinhão, rúcula, queijo creme, ovo, maçã e molho de mostarda e mel." }
   ]},
   { name: "Hambúrgueres", note: "Acompanhados de batata frita.", items: [
     { name: "Dos Açores", price: 12.50, image: "assets/dishes/hamburguer-dos-acores.jpg", description: "Pão de hambúrguer, hambúrguer de bovino (150 g), queijo cheddar e flamengo, fiambre, alface, tomate, cebola roxa, maionese e ketchup." }, { name: "Black Angus", price: 16.00, image: "assets/dishes/hamburguer-black-angus.jpg", description: "Pão de hambúrguer, hambúrguer Black Angus (200 g), queijo cheddar, tomate, rúcula, bacon, ovo, cebola frita e molho sweet chilli." }, { name: "Double", price: 15.00, image: "assets/dishes/hamburguer-double.jpg", description: "Pão de hambúrguer, dois hambúrgueres de bovino (150 g), queijo cheddar, bacon, couve roxa, pickles, alface e maionese de alho e ervas." }, { name: "Trufado", price: 15.00, description: "Pão de hambúrguer, hambúrguer de bovino (150 g), alface, tomate, queijo cheddar, bacon, cogumelos e maionese trufada." }, { name: "Presunto", price: 14.00, image: "assets/dishes/hamburguer-presunto.jpg", description: "Pão de hambúrguer, hambúrguer de bovino, alface, tomate, cenoura, ananás, queijo cheddar, presunto e molho sweet chilli." }, { name: "Vegan", price: 14.00, image: "assets/dishes/hamburguer-vegan.jpg", description: "Bolo do caco multicereais, hambúrguer vegan, rúcula, tomate, cogumelos e maionese vegan.", tags: ["Vegan"] }
@@ -156,6 +156,12 @@ function money(value) {
   const number = Number(value).toFixed(2);
   return language === "en" ? "€ " + number : number.replace(".", ",") + " €";
 }
+function arrowIcon(direction) {
+  const path = direction === "back"
+    ? "M19 12H5m7 7-7-7 7-7"
+    : "M7 17 17 7M8 7h9v9";
+  return "<svg class=\"" + (direction === "back" ? "back-arrow-icon" : "external-arrow-icon") + "\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"" + path + "\"></path></svg>";
+}
 function itemPrice(item) {
   if (item.prices) return item.prices.map(function (entry) {
     const label = language === "en" && entry.label === "Copo" ? "Glass" : entry.label;
@@ -171,7 +177,14 @@ function renderMenuItem(category, item, index) {
   const name = escapeHtml(itemLabel(category, item));
   const price = itemPrice(item);
   if (!itemHasDetails(item)) return "<div class=\"list-item list-item-static\"><span>" + name + "</span><span>" + price + "</span></div>";
-  return "<button class=\"list-item list-item-button\" type=\"button\" data-action=\"open-dish\" data-name=\"" + escapeHtml(category.name) + "\" data-index=\"" + index + "\"><span>" + name + "</span><span>" + price + "</span><span class=\"list-item-arrow\" aria-hidden=\"true\">›</span></button>";
+  let media = "<span class=\"list-item-media list-item-media-placeholder\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"3\"></rect><circle cx=\"8.5\" cy=\"9\" r=\"1.5\"></circle><path d=\"m5 17 5-5 3 3 2-2 4 4\"></path></svg></span>";
+  if (item.image) media = "<span class=\"list-item-media\"><img src=\"" + escapeHtml(item.image) + "\" alt=\"\" loading=\"lazy\"></span>";
+  else if (item.video) media = item.poster
+    ? "<span class=\"list-item-media list-item-media-video\" aria-hidden=\"true\"><img src=\"" + escapeHtml(item.poster) + "\" alt=\"\" loading=\"lazy\"><span></span></span>"
+    : "<span class=\"list-item-media list-item-media-video\" aria-hidden=\"true\"><span></span></span>";
+  const actionText = language === "en" ? "View details" : "Ver detalhes";
+  const ariaLabel = itemLabel(category, item) + " · " + itemPrice(item) + ". " + actionText;
+  return "<button class=\"list-item list-item-button\" type=\"button\" data-action=\"open-dish\" data-name=\"" + escapeHtml(category.name) + "\" data-index=\"" + index + "\" aria-label=\"" + escapeHtml(ariaLabel) + "\">" + media + "<span class=\"list-item-copy\"><span class=\"list-item-name\">" + name + "</span><span class=\"list-item-action\">" + actionText + "</span></span><span class=\"list-item-price\">" + price + "</span></button>";
 }
 function translatedTag(tag) {
   if (language === "en" && tag === "Vegetariano") return "Vegetarian";
@@ -199,7 +212,7 @@ function renderDishSlide(category, item, index) {
   }).join("");
   const photoLabel = language === "en" ? "Dish photo coming soon" : "Fotografia deste prato em breve";
   const media = item.video
-    ? "<video class=\"dish-video\" controls playsinline preload=\"metadata\" aria-label=\"" + escapeHtml(itemLabel(category, item)) + "\"><source src=\"" + escapeHtml(item.video) + "\" type=\"video/mp4\">" + (language === "en" ? "Your browser cannot play this video." : "O teu navegador não consegue reproduzir este vídeo.") + "</video>"
+    ? "<video class=\"dish-video\" controls playsinline preload=\"metadata\"" + (item.poster ? " poster=\"" + escapeHtml(item.poster) + "\" data-poster=\"" + escapeHtml(item.poster) + "\"" : "") + " aria-label=\"" + escapeHtml(itemLabel(category, item)) + "\"><source src=\"" + escapeHtml(item.video) + "\" type=\"video/mp4\">" + (language === "en" ? "Your browser cannot play this video." : "O teu navegador não consegue reproduzir este vídeo.") + "</video>"
     : (item.image
       ? "<img class=\"dish-photo\" src=\"" + escapeHtml(item.image) + "\" alt=\"" + escapeHtml(item.imageAlt && item.imageAlt[language] ? item.imageAlt[language] : itemLabel(category, item)) + "\" loading=\"lazy\">"
       : (detailCategories.has(category.name) ? "<div class=\"photo-placeholder\" role=\"img\" aria-label=\"" + photoLabel + "\"><span class=\"photo-icon\" aria-hidden=\"true\">✧</span><span class=\"photo-label\">" + photoLabel + "</span></div>" : ""));
@@ -208,9 +221,8 @@ function renderDishSlide(category, item, index) {
     ? "<span class=\"photo-credit\">" + (language === "en" ? "Restaurant video" : "Vídeo do restaurante") + "</span>"
     : (item.image ? "<span class=\"photo-credit\">" + escapeHtml(item.imageCredit && item.imageCredit[language] ? item.imageCredit[language] : photoSourceLabel(item.image)) + "</span>" : "");
   const slideClass = "menu-slide dish-slide" + (media ? "" : " no-photo");
-  const backText = dishReturnView === "all-menu" ? (language === "en" ? "View everything" : "Ver tudo") : categoryLabel(category);
-  const backAria = language === "en" ? "Back to " + backText : "Voltar a " + backText;
-  const backButton = "<button class=\"dish-back\" type=\"button\" data-action=\"back-category\" aria-label=\"" + escapeHtml(backAria) + "\"><span class=\"dish-back-arrow\" aria-hidden=\"true\">←</span><span>" + escapeHtml(backText) + "</span></button>";
+  const backText = dishReturnView === "all-menu" ? (language === "en" ? "Back to everything" : "Voltar a ver tudo") : (language === "en" ? "Back to " : "Voltar a ") + categoryLabel(category);
+  const backButton = "<button class=\"dish-back\" type=\"button\" data-action=\"back-category\">" + arrowIcon("back") + "<span>" + escapeHtml(backText) + "</span></button>";
   return "<section class=\"" + slideClass + "\" data-category=\"" + categoryId + "\" data-key=\"" + key + "\" style=\"--c:" + slideBackground(category.name) + "\"><div class=\"slide-background\"></div>" + backButton + photoStage + photoCredit + "<div class=\"slide-glow\"></div><div class=\"slide-content\"><span class=\"slide-category\">" + escapeHtml(categoryLabel(category)) + "</span><h1 class=\"slide-title\">" + escapeHtml(itemLabel(category, item)) + "</h1>" + (description ? "<p class=\"slide-description\">" + escapeHtml(description) + "</p>" : "") + (note ? "<p class=\"slide-note\">" + escapeHtml(note) + "</p>" : "") + "<div class=\"slide-row\"><strong class=\"price-pill\">" + itemPrice(item) + "</strong>" + tags + "</div></div></section>";
 }
 function renderListSlide(category) {
@@ -224,17 +236,17 @@ function renderListSlide(category) {
   });
   const note = categoryNote(category);
   const craftFeature = category.name === "Cervejas" ? renderCraftBeerFeature() : "";
-  return "<section class=\"menu-slide list-slide\" data-category=\"" + categoryId + "\" data-key=\"" + categoryId + "-list\" style=\"--c:" + slideBackground(category.name) + "\"><div class=\"list-background\"></div><div class=\"list-panel\"><span class=\"list-eyebrow\">SAPIENS · MENU</span><h1 class=\"list-title\">" + escapeHtml(categoryLabel(category)) + "</h1>" + (note ? "<p class=\"list-note\">" + escapeHtml(note) + "</p>" : "") + craftFeature + rows + "</div></section>";
+  return "<section class=\"menu-slide list-slide\" data-category=\"" + categoryId + "\" data-key=\"" + categoryId + "-list\" style=\"--c:" + slideBackground(category.name) + "\"><div class=\"list-background\"></div><div class=\"list-panel\"><span class=\"list-eyebrow\">SAPIENS PREGARIA · MENU</span><h1 class=\"list-title\">" + escapeHtml(categoryLabel(category)) + "</h1>" + (note ? "<p class=\"list-note\">" + escapeHtml(note) + "</p>" : "") + craftFeature + rows + "</div></section>";
 }
 function renderHomeSlide() {
   const english = language === "en";
   const allLabel = english ? "View everything" : "Ver tudo";
   const videosLabel = english ? "Kitchen videos" : "Vídeos da cozinha";
   const infoLabel = english ? "Useful information" : "Informações úteis";
-  const heroTitle = english ? "Sapiens flavours." : "Sabores do Sapiens.";
-  const heroCopy = english ? "Discover the dishes and small plates from our kitchen." : "Descobre os pratos e petiscos da casa.";
+  const heroTitle = "Sapiens Pregaria.";
+  const heroCopy = english ? "Discover the dishes and small plates from Sapiens Pregaria." : "Descobre os pratos e petiscos da Sapiens Pregaria.";
   const groups = landingCategoryGroups.map(renderLandingCategoryGroup).join("");
-  return "<section class=\"menu-slide list-slide landing-slide\" data-key=\"inicio\"><div class=\"list-background\"></div><div class=\"list-panel landing-panel\"><section class=\"landing-hero\"><div class=\"landing-hero-media\"><img src=\"assets/dishes/hamburguer-dos-acores.jpg\" alt=\"\" fetchpriority=\"high\"></div><div class=\"landing-hero-copy\"><span class=\"landing-hero-kicker\">SAPIENS · EMENTA DIGITAL</span><h1 class=\"landing-hero-title\">" + heroTitle + "</h1><p class=\"landing-hero-description\">" + heroCopy + "</p><button class=\"landing-hero-cta\" type=\"button\" data-action=\"show-all\"><span>" + allLabel + "</span><span aria-hidden=\"true\">→</span></button></div></section>" + groups + "<div class=\"landing-links\"><button type=\"button\" data-action=\"open-videos\">" + videosLabel + "</button><button type=\"button\" data-action=\"open-info\">" + infoLabel + "</button></div></div></section>";
+  return "<section class=\"menu-slide list-slide landing-slide\" data-key=\"inicio\"><div class=\"list-background\"></div><div class=\"list-panel landing-panel\"><section class=\"landing-hero\"><div class=\"landing-hero-media\"><img src=\"assets/dishes/hamburguer-dos-acores.jpg\" alt=\"\" fetchpriority=\"high\"></div><div class=\"landing-hero-copy\"><span class=\"landing-hero-kicker\">SAPIENS PREGARIA · EMENTA DIGITAL</span><h1 class=\"landing-hero-title\">" + heroTitle + "</h1><p class=\"landing-hero-description\">" + heroCopy + "</p><button class=\"landing-hero-cta\" type=\"button\" data-action=\"show-all\"><span>" + allLabel + "</span><span aria-hidden=\"true\">→</span></button></div></section>" + groups + "<div class=\"landing-links\"><button type=\"button\" data-action=\"open-videos\">" + videosLabel + "</button><button type=\"button\" data-action=\"open-info\">" + infoLabel + "</button></div></div></section>";
 }
 function renderLandingCategoryGroup(group) {
   const english = language === "en";
@@ -244,14 +256,14 @@ function renderLandingCategoryGroup(group) {
     const category = categoryByName.get(name);
     if (!category) return "";
     const secondary = name === "Cafetaria" ? " landing-category-option-muted" : "";
-    return "<button class=\"landing-category-option" + secondary + "\" type=\"button\" data-action=\"open-category\" data-name=\"" + escapeHtml(name) + "\"><span>" + escapeHtml(categoryLabel(category)) + "</span><span class=\"landing-category-arrow\" aria-hidden=\"true\">↗</span></button>";
+    return "<button class=\"landing-category-option" + secondary + "\" type=\"button\" data-action=\"open-category\" data-name=\"" + escapeHtml(name) + "\"><span>" + escapeHtml(categoryLabel(category)) + "</span><span class=\"landing-category-arrow\" aria-hidden=\"true\">" + arrowIcon("external") + "</span></button>";
   }).join("");
   const features = (group.featuredCategories || []).map(function (feature) {
     const category = categoryByName.get(feature.name);
     if (!category) return "";
     const eyebrow = english ? feature.englishEyebrow : feature.eyebrow;
     const detail = english ? feature.englishDetail : feature.detail;
-    return "<button class=\"landing-featured-category\" type=\"button\" data-action=\"open-category\" data-name=\"" + escapeHtml(feature.name) + "\"><span class=\"landing-featured-media\"><img src=\"" + escapeHtml(feature.image) + "\" alt=\"\" loading=\"lazy\"></span><span class=\"landing-featured-overlay\"></span><span class=\"landing-featured-copy\"><span class=\"landing-featured-eyebrow\">" + escapeHtml(eyebrow) + "</span><strong>" + escapeHtml(categoryLabel(category)) + "</strong><span class=\"landing-featured-detail\">" + escapeHtml(detail) + "</span></span><span class=\"landing-featured-arrow\" aria-hidden=\"true\">↗</span></button>";
+    return "<button class=\"landing-featured-category\" type=\"button\" data-action=\"open-category\" data-name=\"" + escapeHtml(feature.name) + "\"><span class=\"landing-featured-media\"><img src=\"" + escapeHtml(feature.image) + "\" alt=\"\" loading=\"lazy\"></span><span class=\"landing-featured-overlay\"></span><span class=\"landing-featured-copy\"><span class=\"landing-featured-eyebrow\">" + escapeHtml(eyebrow) + "</span><strong>" + escapeHtml(categoryLabel(category)) + "</strong><span class=\"landing-featured-detail\">" + escapeHtml(detail) + "</span></span><span class=\"landing-featured-arrow\" aria-hidden=\"true\">" + arrowIcon("external") + "</span></button>";
   }).join("");
   const featureClass = (group.featuredCategories || []).length === 1 ? "landing-featured-grid landing-featured-grid-single" : "landing-featured-grid";
   const featureMarkup = features ? "<div class=\"" + featureClass + "\">" + features + "</div>" : "";
@@ -268,9 +280,9 @@ function renderAllMenu() {
 }
 function renderCategoryMenu(category) {
   const english = language === "en";
-  const back = english ? "← Menu" : "← Menu inicial";
+  const back = english ? "Main menu" : "Menu inicial";
   const hint = category.items.some(itemHasDetails)
-    ? (english ? "Items with an arrow open photos or more details." : "Os itens com seta abrem fotos ou mais detalhes.")
+    ? (english ? "Tap an item to see its details and available photos." : "Toca num item para ver os detalhes e as fotografias disponíveis.")
     : "";
   let lastGroup = "";
   let rows = "";
@@ -281,7 +293,7 @@ function renderCategoryMenu(category) {
   });
   const note = categoryNote(category);
   const craftFeature = category.name === "Cervejas" ? renderCraftBeerFeature() : "";
-  return "<section class=\"menu-slide list-slide category-menu-slide\" data-key=\"" + slug(category.name) + "-menu\" style=\"--c:" + slideBackground(category.name) + "\"><div class=\"list-background\"></div><div class=\"list-panel category-menu-panel\"><button class=\"text-back\" type=\"button\" data-action=\"back-home\">" + back + "</button><span class=\"list-eyebrow\">SAPIENS · MENU</span><h1 class=\"list-title\">" + escapeHtml(categoryLabel(category)) + "</h1>" + (note ? "<p class=\"list-note\">" + escapeHtml(note) + "</p>" : "") + (hint ? "<p class=\"category-menu-hint\">" + escapeHtml(hint) + "</p>" : "") + craftFeature + rows + "</div></section>";
+  return "<section class=\"menu-slide list-slide category-menu-slide\" data-key=\"" + slug(category.name) + "-menu\" style=\"--c:" + slideBackground(category.name) + "\"><div class=\"list-background\"></div><div class=\"list-panel category-menu-panel\"><button class=\"text-back\" type=\"button\" data-action=\"back-home\">" + arrowIcon("back") + "<span>" + back + "</span></button><span class=\"list-eyebrow\">SAPIENS PREGARIA · MENU</span><h1 class=\"list-title\">" + escapeHtml(categoryLabel(category)) + "</h1>" + (note ? "<p class=\"list-note\">" + escapeHtml(note) + "</p>" : "") + (hint ? "<p class=\"category-menu-hint\">" + escapeHtml(hint) + "</p>" : "") + craftFeature + rows + "</div></section>";
 }
 function renderCraftBeerFeature() {
   const english = language === "en";
@@ -311,22 +323,22 @@ function renderCraftBeerFeature() {
     }
   ];
   const cards = brands.map(function (brand) {
-    return "<a class=\"craft-brand-card\" href=\"" + brand.url + "\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"" + escapeHtml(brand.name + " · " + brand.detail) + "\"><span class=\"craft-brand-image\"><img src=\"" + brand.image + "\" alt=\"" + escapeHtml(brand.alt) + "\" loading=\"lazy\"></span><span class=\"craft-brand-copy\"><strong>" + escapeHtml(brand.name) + "</strong><span>" + escapeHtml(brand.detail) + "</span></span><span class=\"craft-brand-arrow\" aria-hidden=\"true\">↗</span></a>";
+    return "<a class=\"craft-brand-card\" href=\"" + brand.url + "\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"" + escapeHtml(brand.name + " · " + brand.detail) + "\"><span class=\"craft-brand-image\"><img src=\"" + brand.image + "\" alt=\"" + escapeHtml(brand.alt) + "\" loading=\"lazy\"></span><span class=\"craft-brand-copy\"><strong>" + escapeHtml(brand.name) + "</strong><span>" + escapeHtml(brand.detail) + "</span></span><span class=\"craft-brand-arrow\" aria-hidden=\"true\">" + arrowIcon("external") + "</span></a>";
   }).join("");
   return "<aside class=\"craft-beer-feature\"><div class=\"craft-beer-heading\"><h2>" + heading + "</h2><p>" + intro + "</p></div><div class=\"craft-brand-strip\" aria-label=\"" + (english ? "Craft beer brands" : "Marcas de cerveja artesanal") + "\">" + cards + "</div></aside>";
 }
 function renderInfoSlide() {
   const english = language === "en";
   const text = english ? {
-    label: "SAPIENS · CAFÉ · KITCHEN", title: "Useful information", hours: "Opening hours", hoursText: "12:00–15:00 · 19:00–22:00", reserve: "Reservations", reserveText: "Call us at", allergen: "Allergens", allergenText: "Our products are prepared in environments that are not completely free of allergens. Cross-contamination is possible. Please ask our team.", legal: "Prices and service", legalText: "Prices include VAT and may change without notice. A complaints book is available. No dish, food product or drink may be charged unless requested by the customer or rendered unusable by them, under Article 135 of Decree-Law 10/2015 of 16 January."
+    label: "SAPIENS PREGARIA · CAFÉ · KITCHEN", title: "Useful information", hours: "Opening hours", hoursText: "12:00–15:00 · 19:00–22:00", reserve: "Reservations", reserveText: "Call us at", allergen: "Allergens", allergenText: "Our products are prepared in environments that are not completely free of allergens. Cross-contamination is possible. Please ask our team.", legal: "Prices and service", legalText: "Prices include VAT and may change without notice. A complaints book is available. No dish, food product or drink may be charged unless requested by the customer or rendered unusable by them, under Article 135 of Decree-Law 10/2015 of 16 January."
   } : {
-    label: "SAPIENS · CAFÉ · COZINHA", title: "Informações úteis", hours: "Horário", hoursText: "12:00–15:00 · 19:00–22:00", reserve: "Reservas", reserveText: "Ligue-nos para", allergen: "Alergénios", allergenText: "Os nossos produtos são preparados em ambientes que não são completamente livres de alergénios. Existe risco de contaminação cruzada. Informe-se com a nossa equipa.", legal: "Preços e serviço", legalText: "Os valores incluem IVA e estão sujeitos a alteração sem aviso prévio. Este estabelecimento dispõe de livro de reclamações. Nenhum prato, produto alimentar ou bebida pode ser cobrado se não for solicitado pelo cliente ou por este inutilizado, conforme o artigo 135.º do DL 10/2015, de 16 de janeiro."
+    label: "SAPIENS PREGARIA · CAFÉ · COZINHA", title: "Informações úteis", hours: "Horário", hoursText: "12:00–15:00 · 19:00–22:00", reserve: "Reservas", reserveText: "Ligue-nos para", allergen: "Alergénios", allergenText: "Os nossos produtos são preparados em ambientes que não são completamente livres de alergénios. Existe risco de contaminação cruzada. Informe-se com a nossa equipa.", legal: "Preços e serviço", legalText: "Os valores incluem IVA e estão sujeitos a alteração sem aviso prévio. Este estabelecimento dispõe de livro de reclamações. Nenhum prato, produto alimentar ou bebida pode ser cobrado se não for solicitado pelo cliente ou por este inutilizado, conforme o artigo 135.º do DL 10/2015, de 16 de janeiro."
   };
   return "<section class=\"menu-slide list-slide info-slide\" data-category=\"informacoes\" data-key=\"informacoes\" style=\"--c:#4b1d3f\"><div class=\"list-background\"></div><div class=\"list-panel info-panel\"><span class=\"list-eyebrow\">" + text.label + "</span><h1 class=\"list-title\">" + text.title + "</h1><div class=\"info-card\"><h2>" + text.hours + "</h2><p>" + text.hoursText + "</p></div><div class=\"info-card\"><h2>" + text.reserve + "</h2><p>" + text.reserveText + " <a href=\"tel:+351916671941\">916 671 941</a></p></div><div class=\"info-card\"><h2>" + text.allergen + "</h2><p>" + text.allergenText + "</p></div><div class=\"info-card\"><h2>" + text.legal + "</h2><p>" + text.legalText + "</p></div></div></section>";
 }
 function renderVideoSlide() {
   const text = language === "en" ? {
-    eyebrow: "SAPIENS · INSIDE THE RESTAURANT",
+    eyebrow: "SAPIENS PREGARIA · INSIDE THE RESTAURANT",
     title: "A little closer to Sapiens.",
     body: "Muted video previews. Tap any square to open the video or photo.",
     galleryTitle: "Sapiens moments",
@@ -336,7 +348,7 @@ function renderVideoSlide() {
       { type: "video", title: "Steak with mushrooms", src: "assets/videos/bife-cogumelos-prato.mp4" },
       { type: "photo", title: "Our dining room", src: "assets/space/restaurant-main.jpg" },
       { type: "video", title: "Tropical", src: "assets/videos/tropical.mp4" },
-      { type: "video", title: "Francesinha", src: "assets/videos/francesinha.mp4" },
+      { type: "video", title: "Francesinha", src: "assets/videos/francesinha.mp4", poster: "assets/dishes/prego-francesinha-frame.jpg" },
       { type: "photo", title: "A table at Sapiens", src: "assets/space/restaurant-dining.jpg" },
       { type: "video", title: "Burger A", src: "assets/videos/burger-a.mp4" },
       { type: "video", title: "Sangria", src: "assets/videos/sangria.mp4" },
@@ -346,7 +358,7 @@ function renderVideoSlide() {
     action: "More videos on Instagram",
     note: "Instagram opens in a new tab."
   } : {
-    eyebrow: "SAPIENS · POR DENTRO DO RESTAURANTE",
+    eyebrow: "SAPIENS PREGARIA · POR DENTRO DO RESTAURANTE",
     title: "Um pouco mais perto do Sapiens.",
     body: "Os vídeos passam sem som. Toca num quadrado para abrir o vídeo ou a foto.",
     galleryTitle: "Momentos Sapiens",
@@ -356,7 +368,7 @@ function renderVideoSlide() {
       { type: "video", title: "Bife Cogumelos", src: "assets/videos/bife-cogumelos-prato.mp4" },
       { type: "photo", title: "A nossa sala", src: "assets/space/restaurant-main.jpg" },
       { type: "video", title: "Tropical", src: "assets/videos/tropical.mp4" },
-      { type: "video", title: "Francesinha", src: "assets/videos/francesinha.mp4" },
+      { type: "video", title: "Francesinha", src: "assets/videos/francesinha.mp4", poster: "assets/dishes/prego-francesinha-frame.jpg" },
       { type: "photo", title: "Uma mesa no Sapiens", src: "assets/space/restaurant-dining.jpg" },
       { type: "video", title: "Burger A", src: "assets/videos/burger-a.mp4" },
       { type: "video", title: "Sangria", src: "assets/videos/sangria.mp4" },
@@ -372,12 +384,12 @@ function renderVideoSlide() {
       ? "<span class=\"social-tile-badge\" aria-hidden=\"true\">▶</span>"
       : "<span class=\"social-tile-badge social-tile-photo-badge\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><circle cx=\"8.5\" cy=\"9\" r=\"1.5\" fill=\"currentColor\"/><path d=\"m5 17 5-5 3 3 2-2 4 4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span>";
     const media = isVideo
-      ? "<video class=\"social-tile-video\" data-src=\"" + item.src + "\" muted loop playsinline preload=\"none\" aria-hidden=\"true\"></video>"
+      ? "<video class=\"social-tile-video\"" + (item.poster ? " poster=\"" + item.poster + "\" data-poster=\"" + item.poster + "\"" : "") + " data-src=\"" + item.src + "\" muted loop playsinline preload=\"none\" aria-hidden=\"true\"></video>"
       : "<img class=\"social-tile-image\" src=\"" + item.src + "\" alt=\"\" loading=\"lazy\">";
     const typeLabel = isVideo ? text.videoBadge : text.photoBadge;
-    return "<button class=\"social-tile\" type=\"button\" data-action=\"open-media\" data-media-type=\"" + item.type + "\" data-src=\"" + item.src + "\" data-title=\"" + escapeHtml(item.title) + "\" aria-label=\"" + escapeHtml(typeLabel + ": " + item.title) + "\">" + media + badge + "<span class=\"social-tile-caption\">" + escapeHtml(item.title) + "</span></button>";
+    return "<button class=\"social-tile\" type=\"button\" data-action=\"open-media\" data-media-type=\"" + item.type + "\" data-src=\"" + item.src + "\"" + (item.poster ? " data-poster=\"" + item.poster + "\"" : "") + " data-title=\"" + escapeHtml(item.title) + "\" aria-label=\"" + escapeHtml(typeLabel + ": " + item.title) + "\">" + media + badge + "<span class=\"social-tile-caption\">" + escapeHtml(item.title) + "</span></button>";
   }).join("");
-  return "<section class=\"menu-slide video-slide\" data-category=\"videos\" data-key=\"videos\" style=\"--c:#7a2a1f\"><div class=\"list-background\"></div><div class=\"video-panel\"><span class=\"list-eyebrow\">" + text.eyebrow + "</span><h1 class=\"list-title\">" + text.title + "</h1><p class=\"video-copy\">" + text.body + "</p><section class=\"social-gallery\" aria-label=\"" + text.galleryTitle + "\"><h2 class=\"social-gallery-title\">" + text.galleryTitle + "</h2><div class=\"social-media-grid\">" + mediaTiles + "</div></section><a class=\"video-link-card\" href=\"https://www.instagram.com/sapiens_pregaria/reels/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"" + text.action + " · @sapiens_pregaria\"><span class=\"video-mark\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M9 6.75v10.5L17.5 12 9 6.75Z\" fill=\"currentColor\"/></svg></span><span class=\"video-link-text\"><strong>" + text.action + "</strong><small>@sapiens_pregaria</small></span><span class=\"video-link-arrow\" aria-hidden=\"true\">↗</span></a><p class=\"video-note\">" + text.note + "</p></div></section>";
+  return "<section class=\"menu-slide video-slide\" data-category=\"videos\" data-key=\"videos\" style=\"--c:#7a2a1f\"><div class=\"list-background\"></div><div class=\"video-panel\"><span class=\"list-eyebrow\">" + text.eyebrow + "</span><h1 class=\"list-title\">" + text.title + "</h1><p class=\"video-copy\">" + text.body + "</p><section class=\"social-gallery\" aria-label=\"" + text.galleryTitle + "\"><h2 class=\"social-gallery-title\">" + text.galleryTitle + "</h2><div class=\"social-media-grid\">" + mediaTiles + "</div></section><a class=\"video-link-card\" href=\"https://www.instagram.com/sapiens_pregaria/reels/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"" + text.action + " · @sapiens_pregaria\"><span class=\"video-mark\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M9 6.75v10.5L17.5 12 9 6.75Z\" fill=\"currentColor\"/></svg></span><span class=\"video-link-text\"><strong>" + text.action + "</strong><small>@sapiens_pregaria</small></span><span class=\"video-link-arrow\" aria-hidden=\"true\">" + arrowIcon("external") + "</span></a><p class=\"video-note\">" + text.note + "</p></div></section>";
 }
 function updateLanguageButton() {
   languageToggle.textContent = language === "pt" ? "EN" : "PT";
@@ -479,8 +491,17 @@ function openGalleryMedia(button) {
     media.controls = true;
     media.autoplay = true;
     media.playsInline = true;
+    if (button.dataset.poster) media.poster = button.dataset.poster;
     media.src = src;
     media.setAttribute("aria-label", title);
+    media.addEventListener("error", function () {
+      if (!button.dataset.poster || !media.isConnected) return;
+      const fallbackImage = document.createElement("img");
+      fallbackImage.className = "media-lightbox-media";
+      fallbackImage.src = button.dataset.poster;
+      fallbackImage.alt = title;
+      media.replaceWith(fallbackImage);
+    }, { once: true });
   } else {
     media = document.createElement("img");
     media.src = src;
@@ -522,7 +543,7 @@ function renderCurrentView(restoreKey, restoreScrollTop) {
     const isAllMenu = appView === "all-menu";
     categoryNav.classList.add("is-drawer");
     const backToCategory = appView === "dishes" && currentCategory
-      ? "<button class=\"chip drawer-item drawer-home\" type=\"button\" data-action=\"back-category\">← " + escapeHtml(categoryLabel(currentCategory)) + "</button>"
+      ? "<button class=\"chip drawer-item drawer-home\" type=\"button\" data-action=\"back-category\">" + arrowIcon("back") + "<span>" + escapeHtml(language === "en" ? "Back to " : "Voltar a ") + escapeHtml(categoryLabel(currentCategory)) + "</span></button>"
       : "";
     const initialMenuLabel = english ? "⌂  Main menu" : "⌂  Menu inicial";
     const viewAllLabel = english ? "View everything" : "Ver tudo";
@@ -637,6 +658,19 @@ menuMain.addEventListener("click", function (event) {
   if (button && !button.disabled) handleAction(button);
 });
 menuMain.addEventListener("error", function (event) {
+  const media = event.target;
+  if (media instanceof HTMLVideoElement && media.dataset.poster) {
+    const fallbackImage = document.createElement("img");
+    const isSocialTile = media.classList.contains("social-tile-video");
+    fallbackImage.className = isSocialTile ? "social-tile-image" : "dish-photo";
+    fallbackImage.src = media.dataset.poster;
+    fallbackImage.alt = media.getAttribute("aria-label") || (language === "en" ? "Francesinha video still" : "Frame do vídeo da Francesinha");
+    fallbackImage.loading = "eager";
+    media.replaceWith(fallbackImage);
+    const credit = !isSocialTile && fallbackImage.closest(".dish-slide")?.querySelector(".photo-credit");
+    if (credit) credit.textContent = language === "en" ? "Video still" : "Imagem do vídeo";
+    return;
+  }
   const image = event.target;
   if (!(image instanceof HTMLImageElement) || !image.classList.contains("dish-photo")) return;
   const label = language === "en" ? "Photo unavailable" : "Fotografia indisponível";
