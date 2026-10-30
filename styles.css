@@ -81,6 +81,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--cream); outline
   cursor: pointer;
   backdrop-filter: blur(8px);
   -webkit-tap-highlight-color: transparent;
+  margin-left: auto;
 }
 .category-menu-toggle[hidden] { display: none; }
 .category-menu-toggle span { display: block; width: 15px; height: 1.5px; border-radius: 99px; background: currentColor; }
@@ -236,6 +237,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--cream); outline
   -webkit-tap-highlight-color: transparent;
   transition: background .16s ease, transform .16s ease;
 }
+.dish-back[hidden] { display: none; }
+.dish-back-fixed { z-index: 8; }
 .dish-back:active { transform: scale(.96); background: rgba(18, 13, 14, .9); }
 .dish-back:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
 .back-arrow-icon, .external-arrow-icon { display: block; flex: 0 0 14px; width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }

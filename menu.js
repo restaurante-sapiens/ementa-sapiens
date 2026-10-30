@@ -62,6 +62,7 @@ const menu = [
 
 const categoryNav = document.getElementById("category-nav");
 const categoryMenuToggle = document.getElementById("category-menu-toggle");
+const dishBackFixed = document.getElementById("dish-back-fixed");
 const categoryMenuScrim = document.getElementById("category-menu-scrim");
 const menuMain = document.getElementById("menu-main");
 const mediaLightbox = document.getElementById("media-lightbox");
@@ -238,9 +239,7 @@ function renderDishSlide(category, item, index) {
     ? "<span class=\"photo-credit\">" + (language === "en" ? "Restaurant video" : "Vídeo do restaurante") + "</span>"
     : (item.image ? "<span class=\"photo-credit\">" + escapeHtml(item.imageCredit && item.imageCredit[language] ? item.imageCredit[language] : photoSourceLabel(item.image)) + "</span>" : "");
   const slideClass = "menu-slide dish-slide" + (media ? "" : " no-photo");
-  const backText = dishReturnView === "all-menu" ? (language === "en" ? "Back to everything" : "Voltar a ver tudo") : (language === "en" ? "Back to " : "Voltar a ") + categoryLabel(category);
-  const backButton = "<button class=\"dish-back\" type=\"button\" data-action=\"back-category\">" + arrowIcon("back") + "<span>" + escapeHtml(backText) + "</span></button>";
-  return "<section class=\"" + slideClass + "\" data-category=\"" + categoryId + "\" data-key=\"" + key + "\" style=\"--c:" + slideBackground(category.name) + "\"><div class=\"slide-background\"></div>" + backButton + photoStage + photoCredit + "<div class=\"slide-glow\"></div><div class=\"slide-content\"><span class=\"slide-category\">" + escapeHtml(categoryLabel(category)) + "</span><h1 class=\"slide-title\">" + escapeHtml(itemLabel(category, item)) + "</h1>" + (description ? "<p class=\"slide-description\">" + escapeHtml(description) + "</p>" : "") + (note ? "<p class=\"slide-note\">" + escapeHtml(note) + "</p>" : "") + "<div class=\"slide-row\"><strong class=\"price-pill\">" + itemPrice(item) + "</strong>" + tags + "</div></div></section>";
+  return "<section class=\"" + slideClass + "\" data-category=\"" + categoryId + "\" data-key=\"" + key + "\" style=\"--c:" + slideBackground(category.name) + "\"><div class=\"slide-background\"></div>" + photoStage + photoCredit + "<div class=\"slide-glow\"></div><div class=\"slide-content\"><span class=\"slide-category\">" + escapeHtml(categoryLabel(category)) + "</span><h1 class=\"slide-title\">" + escapeHtml(itemLabel(category, item)) + "</h1>" + (description ? "<p class=\"slide-description\">" + escapeHtml(description) + "</p>" : "") + (note ? "<p class=\"slide-note\">" + escapeHtml(note) + "</p>" : "") + "<div class=\"slide-row\"><strong class=\"price-pill\">" + itemPrice(item) + "</strong>" + tags + "</div></div></section>";
 }
 function renderListSlide(category) {
   const categoryId = slug(category.name);
@@ -550,6 +549,14 @@ function renderCurrentView(restoreKey, restoreScrollTop) {
 
   menuMain.innerHTML = content;
   menuMain.classList.toggle("is-dishes", appView === "dishes");
+  dishBackFixed.hidden = appView !== "dishes" || !currentCategory;
+  if (!dishBackFixed.hidden) {
+    const backText = dishReturnView === "all-menu"
+      ? (language === "en" ? "Back to everything" : "Voltar a ver tudo")
+      : (language === "en" ? "Back to " : "Voltar a ") + categoryLabel(currentCategory);
+    dishBackFixed.innerHTML = arrowIcon("back") + "<span>" + escapeHtml(backText) + "</span>";
+    dishBackFixed.setAttribute("aria-label", backText);
+  }
   categoryMenuOpen = false;
   categoryMenuToggle.hidden = appView === "home";
   categoryMenuToggle.setAttribute("aria-expanded", "false");
@@ -653,6 +660,9 @@ categoryNav.addEventListener("click", function (event) {
     return;
   }
   handleAction(button);
+});
+dishBackFixed.addEventListener("click", function () {
+  handleAction(dishBackFixed);
 });
 categoryMenuToggle.addEventListener("click", function () {
   setCategoryMenuOpen(!categoryMenuOpen);
