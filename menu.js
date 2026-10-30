@@ -7,7 +7,7 @@ const menu = [
   ]},
   { name: "Cervejas", items: [
     { name: "Fino · 25 cl", price: 2.00 }, { name: "Rei · 50 cl", price: 4.00 }, { name: "1927 · Super Bock", price: 4.00 }, { name: "Somersby", price: 3.00 }, { name: "Stout de pressão", price: 2.50 }, { name: "Cerveja sem álcool", price: 2.50 },
-    { name: "Franziskaner", price: 6.00, group: "Artesanais" }, { name: "Leffe Blonde", price: 5.00, group: "Artesanais" }, { name: "1927 Munich", price: 4.00, image: "assets/dishes/cerveja-1927-munich.jpg", group: "Artesanais" }, { name: "1927 Weiss", price: 4.00, group: "Artesanais" }, { name: "Tough Love End of Time", price: 6.50, group: "Artesanais" }, { name: "Tough Love Imperial Stout", price: 5.00, group: "Artesanais" }, { name: "Tough Love Trip to Andalucía", price: 5.50, group: "Artesanais" }, { name: "Tough Love IPA", price: 5.50, group: "Artesanais" }
+    { name: "Franziskaner", price: 6.00, group: "Artesanais" }, { name: "Leffe Blonde", price: 5.00, group: "Artesanais" }, { name: "1927 Munich", price: 4.00, group: "Artesanais" }, { name: "1927 Weiss", price: 4.00, group: "Artesanais" }, { name: "Tough Love End of Time", price: 6.50, group: "Artesanais" }, { name: "Tough Love Imperial Stout", price: 5.00, group: "Artesanais" }, { name: "Tough Love Trip to Andalucía", price: 5.50, group: "Artesanais" }, { name: "Tough Love IPA", price: 5.50, group: "Artesanais" }
   ]},
   { name: "Licores", items: [
     { name: "Amêndoa Amarga", price: 3.50 }, { name: "C.R.F.", price: 4.50 }, { name: "Croft", price: 3.00 }, { name: "Licor Beirão", price: 4.00 }, { name: "Martini Bianco", price: 3.00 }, { name: "Martini Rosso", price: 3.00 }, { name: "Vinho do Porto", price: 5.00 }
@@ -21,7 +21,7 @@ const menu = [
   { name: "Vinhos", items: [
     { name: "Vinho da Casa", price: 12.00, group: "Tinto" }, { name: "Entre Quintas", price: 12.00, group: "Tinto" }, { name: "Barão de Vilar", price: 13.00, group: "Tinto" }, { name: "Com Notas", price: 14.00, group: "Tinto" }, { name: "Assobio", price: 14.00, group: "Tinto" }, { name: "Teoria Reserva", price: 15.00, group: "Tinto" }, { name: "Graínha", price: 25.00, group: "Tinto" }, { name: "Dez Tostões", price: 25.00, group: "Tinto" }, { name: "Duas Quintas", price: 28.00, group: "Tinto" },
     { name: "Vinho da Casa", price: 12.00, group: "Branco" }, { name: "Montaria", price: 12.00, group: "Branco" }, { name: "Vallegre", price: 12.00, group: "Branco" }, { name: "Planalto", price: 12.00, group: "Branco" }, { name: "Assobio", price: 14.00, group: "Branco" }, { name: "Pinha - Encruzado", price: 14.00, group: "Branco" }, { name: "Teoria Reserva", price: 15.00, group: "Branco" }, { name: "Bons Ares", price: 20.00, group: "Branco" }, { name: "Duas Quintas", price: 25.00, group: "Branco" },
-    { name: "Muralhas", price: 13.00, group: "Verde" }, { name: "Quinta D’Amares", price: 14.00, group: "Verde" }, { name: "Sítio do Santo Rosé", price: 10.00, image: "assets/dishes/vinho-sitio-santo-rose.jpg", group: "Verde" }, { name: "Caiz", price: 12.00, group: "Verde" },
+    { name: "Muralhas", price: 13.00, group: "Verde" }, { name: "Quinta D’Amares", price: 14.00, group: "Verde" }, { name: "Sítio do Santo Rosé", price: 10.00, group: "Verde" }, { name: "Caiz", price: 12.00, group: "Verde" },
     { name: "Terras do Demo Branco", price: 17.00, group: "Espumantes" }, { name: "Terras do Demo Tinto", price: 17.00, group: "Espumantes" }, { name: "Terras do Demo Rosé", price: 17.00, group: "Espumantes" }, { name: "Villa Yolanda Rosé", price: 14.00, group: "Espumantes" },
     { name: "Branco", price: 3.00, group: "A copo" }, { name: "Tinto", price: 4.00, group: "A copo" }
   ]},
@@ -322,26 +322,23 @@ function renderCraftBeerFeature() {
       name: "Tough Love",
       detail: english ? "Brewed in Esmoriz" : "Produzida em Esmoriz",
       image: "https://assets.untappd.com/site/brewery_logos/brewery-383517_4097d.jpeg",
-      alt: english ? "Tough Love brewery logo" : "Logótipo da cervejeira Tough Love",
-      url: "https://toughlove.pt/"
+      alt: english ? "Tough Love brewery logo" : "Logótipo da cervejeira Tough Love"
     },
     {
       name: "Deuses do Malte",
       detail: english ? "Portuguese craft brewery" : "Cervejeira artesanal portuguesa",
       image: "https://static.wixstatic.com/media/f1ae29_72f6198feef74693bbfe1e54e81cc8d5~mv2.png/v1/fill/w_720%2Ch_720%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/LOGOdeusesdomaltePreto.png",
-      alt: "Logótipo Deuses do Malte",
-      url: "https://filomenacarvalho19.wixsite.com/deusesdomalte"
+      alt: "Logótipo Deuses do Malte"
     },
     {
       name: "Burguesa",
       detail: english ? "Portuguese craft beer" : "Cerveja artesanal portuguesa",
       image: "https://cdn-shopkit.com/usercontent/burguesa/media/images/square/bf21c63-7-cervejas-copo_2.png",
-      alt: english ? "Burguesa craft beer selection" : "Seleção de cervejas artesanais Burguesa",
-      url: "https://www.burguesa.pt/"
+      alt: english ? "Burguesa craft beer selection" : "Seleção de cervejas artesanais Burguesa"
     }
   ];
   const cards = brands.map(function (brand) {
-    return "<a class=\"craft-brand-card\" href=\"" + brand.url + "\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"" + escapeHtml(brand.name + " · " + brand.detail) + "\"><span class=\"craft-brand-image\"><img src=\"" + brand.image + "\" alt=\"" + escapeHtml(brand.alt) + "\" loading=\"lazy\"></span><span class=\"craft-brand-copy\"><strong>" + escapeHtml(brand.name) + "</strong><span>" + escapeHtml(brand.detail) + "</span></span><span class=\"craft-brand-arrow\" aria-hidden=\"true\">" + arrowIcon("external") + "</span></a>";
+    return "<article class=\"craft-brand-card\" aria-label=\"" + escapeHtml(brand.name + " · " + brand.detail) + "\"><span class=\"craft-brand-image\"><img src=\"" + brand.image + "\" alt=\"" + escapeHtml(brand.alt) + "\" loading=\"lazy\"></span><span class=\"craft-brand-copy\"><strong>" + escapeHtml(brand.name) + "</strong><span>" + escapeHtml(brand.detail) + "</span></span></article>";
   }).join("");
   return "<aside class=\"craft-beer-feature\"><div class=\"craft-beer-heading\"><h2>" + heading + "</h2><p>" + intro + "</p></div><div class=\"craft-brand-strip\" aria-label=\"" + (english ? "Craft beer brands" : "Marcas de cerveja artesanal") + "\">" + cards + "</div></aside>";
 }
