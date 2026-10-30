@@ -202,6 +202,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--cream); outline
   scroll-snap-type: none;
   scrollbar-width: none;
 }
+.menu-main.is-dishes { scroll-snap-type: y mandatory; }
+.menu-main.is-dishes .dish-slide { scroll-snap-align: start; scroll-snap-stop: always; }
 .menu-main::-webkit-scrollbar { display: none; }
 .menu-slide {
   position: relative;
@@ -606,36 +608,10 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--cream); outline
 .landing-featured-grid-single .landing-featured-category { min-height: 132px; }
 .landing-category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .landing-category-section-single .landing-category-grid { grid-template-columns: 1fr; }
-.landing-category-option {
-  position: relative;
-  display: flex;
-  min-width: 0;
-  min-height: 122px;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-  overflow: hidden;
-  padding: 12px 50% 12px 13px;
-  border: 1px solid rgba(243, 236, 228, .14);
-  border-radius: 8px;
-  background: #211819;
-  color: var(--cream);
-  text-align: left;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: background .16s ease, transform .16s ease;
-}
-.landing-category-media { position: absolute; z-index: 2; top: 0; right: 0; bottom: 0; width: 48%; overflow: hidden; background: #302522; pointer-events: none; }
-.landing-category-backdrop { position: absolute; inset: -8px; background-position: center; background-size: cover; filter: blur(11px) brightness(.62); transform: scale(1.08); }
-.landing-category-media img { position: relative; z-index: 1; display: block; width: 100%; height: 100%; padding: 3px; object-fit: contain; object-position: center; transition: transform .25s ease; }
-.landing-category-overlay { position: absolute; z-index: 3; top: 0; right: calc(48% - 26px); bottom: 0; width: 54px; background: linear-gradient(90deg, #211819 5%, rgba(33, 24, 25, .68) 48%, rgba(33, 24, 25, 0)); pointer-events: none; }
-.landing-category-option-product .landing-category-media { background: radial-gradient(ellipse at 50% 50%, #4a3527 0%, #302522 72%); }
-.landing-category-label { position: relative; z-index: 4; max-width: 100%; color: var(--cream); font-size: 11px; font-weight: 750; letter-spacing: .035em; line-height: 1.15; text-transform: uppercase; text-shadow: 0 1px 4px rgba(0, 0, 0, .65); }
-.landing-category-arrow { position: absolute; z-index: 5; top: 6px; right: 6px; display: grid; width: 19px; height: 19px; place-items: center; border-radius: 50%; background: rgba(25, 18, 17, .78); color: var(--cream); }
-.landing-category-arrow .external-arrow-icon { width: 12px; height: 12px; }
-.landing-category-option:active { transform: scale(.98); }
-.landing-category-option:hover .landing-category-media img { transform: scale(1.045); }
-.landing-category-option-muted { min-height: 78px; }
+.landing-category-photo-card { min-height: 154px; }
+.landing-category-photo-card-product .landing-featured-media { background: radial-gradient(ellipse at 78% 58%, #59402d 0%, #30231f 58%, #211819 100%); }
+.landing-category-photo-card-product .landing-featured-media img { object-fit: contain; object-position: right center; padding: 9px 20px 9px 46%; }
+.landing-category-photo-card .landing-featured-copy strong { font-size: clamp(16px, 4vw, 21px); text-transform: none; }
 .landing-links { display: flex; justify-content: flex-start; gap: 17px; margin-top: 21px; padding-top: 8px; border-top: 1px solid rgba(243, 236, 228, .12); }
 .landing-links button, .selector-tools button, .text-back {
   min-height: 36px;

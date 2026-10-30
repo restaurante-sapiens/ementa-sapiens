@@ -272,11 +272,10 @@ function renderLandingCategoryGroup(group) {
   const categories = group.categories.map(function (name) {
     const category = categoryByName.get(name);
     if (!category) return "";
-    const secondary = name === "Cafetaria" ? " landing-category-option-muted" : "";
     const productPhoto = new Set(["Gin", "Licores", "Whiskey"]).has(name);
     const image = landingCategoryImages[name];
     const photo = image || "assets/space/restaurant-main.jpg";
-    return "<button class=\"landing-category-option has-image" + (productPhoto ? " landing-category-option-product" : "") + secondary + "\" type=\"button\" data-action=\"open-category\" data-name=\"" + escapeHtml(name) + "\"><span class=\"landing-category-media\"><span class=\"landing-category-backdrop\" style=\"background-image:url(" + escapeHtml(photo) + ")\"></span><img src=\"" + escapeHtml(photo) + "\" alt=\"\" loading=\"lazy\"></span><span class=\"landing-category-overlay\"></span><span class=\"landing-category-label\">" + escapeHtml(categoryLabel(category)) + "</span><span class=\"landing-category-arrow\" aria-hidden=\"true\">" + arrowIcon("external") + "</span></button>";
+    return "<button class=\"landing-featured-category landing-category-photo-card" + (productPhoto ? " landing-category-photo-card-product" : "") + "\" type=\"button\" data-action=\"open-category\" data-name=\"" + escapeHtml(name) + "\"><span class=\"landing-featured-media\"><img src=\"" + escapeHtml(photo) + "\" alt=\"\" loading=\"lazy\"></span><span class=\"landing-featured-overlay\"></span><span class=\"landing-featured-copy\"><strong>" + escapeHtml(categoryLabel(category)) + "</strong></span><span class=\"landing-featured-arrow\" aria-hidden=\"true\">" + arrowIcon("external") + "</span></button>";
   }).join("");
   const features = (group.featuredCategories || []).map(function (feature) {
     const category = categoryByName.get(feature.name);
@@ -550,6 +549,7 @@ function renderCurrentView(restoreKey, restoreScrollTop) {
   else content = renderHomeSlide();
 
   menuMain.innerHTML = content;
+  menuMain.classList.toggle("is-dishes", appView === "dishes");
   categoryMenuOpen = false;
   categoryMenuToggle.hidden = appView === "home";
   categoryMenuToggle.setAttribute("aria-expanded", "false");
