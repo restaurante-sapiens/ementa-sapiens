@@ -129,9 +129,9 @@ const landingCategoryImages = {
   "Extras": "assets/dishes/pao-alho-queijo-bacon.jpg",
   "Bebidas": "assets/video-posters/sangria-limoncello.jpg",
   "Vinhos": "assets/dishes/vinho-sitio-santo-rose.jpg",
-  "Gin": "assets/categories/gordons.jpg",
-  "Licores": "assets/categories/licor-beirao.jpg",
-  "Whiskey": "assets/categories/logan.jpg",
+  "Gin": "assets/categories/gordons-card.png",
+  "Licores": "assets/categories/licor-beirao-card.png",
+  "Whiskey": "assets/categories/logan-card.png",
   "Cafetaria": "assets/categories/cafe.jpg"
 };
 let language = /^pt/i.test(navigator.language || "") ? "pt" : "en";
@@ -275,7 +275,8 @@ function renderLandingCategoryGroup(group) {
     const secondary = name === "Cafetaria" ? " landing-category-option-muted" : "";
     const productPhoto = new Set(["Gin", "Licores", "Whiskey"]).has(name);
     const image = landingCategoryImages[name];
-    return "<button class=\"landing-category-option has-image" + (productPhoto ? " landing-category-option-product" : "") + secondary + "\" type=\"button\" data-action=\"open-category\" data-name=\"" + escapeHtml(name) + "\"><span class=\"landing-category-media\"><img src=\"" + escapeHtml(image || "assets/space/restaurant-main.jpg") + "\" alt=\"\" loading=\"lazy\"></span><span class=\"landing-category-overlay\"></span><span class=\"landing-category-label\">" + escapeHtml(categoryLabel(category)) + "</span><span class=\"landing-category-arrow\" aria-hidden=\"true\">" + arrowIcon("external") + "</span></button>";
+    const photo = image || "assets/space/restaurant-main.jpg";
+    return "<button class=\"landing-category-option has-image" + (productPhoto ? " landing-category-option-product" : "") + secondary + "\" type=\"button\" data-action=\"open-category\" data-name=\"" + escapeHtml(name) + "\"><span class=\"landing-category-media\"><span class=\"landing-category-backdrop\" style=\"background-image:url(" + escapeHtml(photo) + ")\"></span><img src=\"" + escapeHtml(photo) + "\" alt=\"\" loading=\"lazy\"></span><span class=\"landing-category-overlay\"></span><span class=\"landing-category-label\">" + escapeHtml(categoryLabel(category)) + "</span><span class=\"landing-category-arrow\" aria-hidden=\"true\">" + arrowIcon("external") + "</span></button>";
   }).join("");
   const features = (group.featuredCategories || []).map(function (feature) {
     const category = categoryByName.get(feature.name);
