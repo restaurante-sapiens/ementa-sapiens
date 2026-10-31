@@ -144,6 +144,74 @@ let categoryMenuScrollTop = 0;
 let allMenuScrollTop = 0;
 let dishReturnView = "category-list";
 let categoryMenuOpen = false;
+const menuHistoryKey = "sapiensPregariaMenu";
+let historySaveTimer = 0;
+
+function currentDishIndex() {
+  if (appView !== "dishes" || !currentCategory) return currentItemIndex;
+  const center = menuMain.getBoundingClientRect().top + menuMain.clientHeight / 2;
+  const visible = Array.from(menuMain.querySelectorAll(".dish-slide")).find(function (slide) {
+    const rect = slide.getBoundingClientRect();
+    return rect.top <= center && rect.bottom > center;
+  });
+  if (!visible) return currentItemIndex;
+  const match = visible.dataset.key.match(/-(\d+)$/);
+  return match ? Number(match[1]) : currentItemIndex;
+}
+
+function makeMenuHistoryState(depth) {
+  return {
+    [menuHistoryKey]: true,
+    depth: depth,
+    appView: appView,
+    categoryName: currentCategory ? currentCategory.name : null,
+    currentItemIndex: currentDishIndex(),
+    dishReturnView: dishReturnView,
+    homeScrollTop: homeScrollTop,
+    categoryMenuScrollTop: categoryMenuScrollTop,
+    allMenuScrollTop: allMenuScrollTop,
+    scrollTop: menuMain.scrollTop
+  };
+}
+
+function isMenuHistoryState(state) {
+  return Boolean(state && state[menuHistoryKey]);
+}
+
+function saveCurrentMenuHistoryState() {
+  if (!isMenuHistoryState(history.state)) return;
+  try {
+    history.replaceState(makeMenuHistoryState(history.state.depth || 0), "");
+  } catch (_) {
+    // Keep the menu usable in local file previews where some browsers restrict History API URLs.
+  }
+}
+
+function pushMenuHistoryState() {
+  const currentState = isMenuHistoryState(history.state) ? history.state : { depth: 0 };
+  const depth = Number(currentState.depth) || 0;
+  saveCurrentMenuHistoryState();
+  try {
+    history.pushState(makeMenuHistoryState(depth + 1), "");
+  } catch (_) {
+    // GitHub Pages uses HTTPS; this fallback keeps local previews functional if pushState is restricted.
+  }
+}
+
+function restoreMenuHistoryState(state) {
+  if (!isMenuHistoryState(state)) return;
+  appView = state.appView || "home";
+  currentCategory = state.categoryName ? categoryByName.get(state.categoryName) || null : null;
+  currentItemIndex = Math.max(0, Number(state.currentItemIndex) || 0);
+  dishReturnView = state.dishReturnView || "category-list";
+  homeScrollTop = Number(state.homeScrollTop) || 0;
+  categoryMenuScrollTop = Number(state.categoryMenuScrollTop) || 0;
+  allMenuScrollTop = Number(state.allMenuScrollTop) || 0;
+  const restoreKey = appView === "dishes" && currentCategory
+    ? slug(currentCategory.name) + "-" + currentItemIndex
+    : "";
+  renderCurrentView(restoreKey, Number(state.scrollTop) || 0);
+}
 
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, function (char) {
@@ -603,6 +671,14 @@ function handleAction(button) {
     openGalleryMedia(button);
     return;
   }
+  if (action === "back-category" && isMenuHistoryState(history.state) && (Number(history.state.depth) || 0) > 0) {
+    saveCurrentMenuHistoryState();
+    history.back();
+    return;
+  }
+  if (["home", "back-home", "show-all", "open-category", "navigate-category", "open-dish", "open-videos", "open-info"].includes(action)) {
+    pushMenuHistoryState();
+  }
   let restoreScrollTop;
   if (action === "home" || action === "back-home") {
     appView = "home";
@@ -638,6 +714,7 @@ function handleAction(button) {
 
 brandLink.addEventListener("click", function (event) {
   event.preventDefault();
+  if (appView !== "home") pushMenuHistoryState();
   appView = "home";
   currentCategory = null;
   renderCurrentView();
@@ -718,7 +795,16 @@ menuMain.addEventListener("error", function (event) {
 let scrollFrame = 0;
 menuMain.addEventListener("scroll", function () {
   if (scrollFrame) return;
-  scrollFrame = requestAnimationFrame(function () { scrollFrame = 0; updateActiveCategory(); updateScrollProgress(); });
+  scrollFrame = requestAnimationFrame(function () {
+    scrollFrame = 0;
+    updateActiveCategory();
+    updateScrollProgress();
+    clearTimeout(historySaveTimer);
+    historySaveTimer = setTimeout(saveCurrentMenuHistoryState, 140);
+  });
+});
+window.addEventListener("popstate", function (event) {
+  restoreMenuHistoryState(event.state);
 });
 languageToggle.addEventListener("click", function () {
   let restoreKey = "";
@@ -734,4 +820,15 @@ languageToggle.addEventListener("click", function () {
   renderCurrentView(restoreKey);
 });
 
-renderCurrentView();
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+if (isMenuHistoryState(history.state)) {
+  restoreMenuHistoryState(history.state);
+  saveCurrentMenuHistoryState();
+} else {
+  try {
+    history.replaceState(makeMenuHistoryState(0), "");
+  } catch (_) {
+    // The menu still works normally in browser previews that disallow history state changes.
+  }
+  renderCurrentView();
+}
