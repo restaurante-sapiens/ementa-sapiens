@@ -662,6 +662,7 @@ function renderCurrentView(restoreKey, restoreScrollTop) {
   initializeSocialVideoPreviews();
   updateActiveCategory();
   updateScrollProgress();
+  saveCurrentMenuHistoryState();
 }
 
 function handleAction(button) {
