@@ -615,7 +615,6 @@ function renderCurrentView(restoreKey, restoreScrollTop) {
 
   menuMain.innerHTML = content;
   menuMain.classList.toggle("is-dishes", appView === "dishes");
-  menuMain.classList.toggle("is-all-menu", appView === "all-menu");
   dishBackFixed.hidden = appView !== "dishes" || !currentCategory;
   if (!dishBackFixed.hidden) {
     const backText = dishReturnView === "all-menu"

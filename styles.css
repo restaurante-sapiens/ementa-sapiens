@@ -205,8 +205,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--cream); outline
 }
 .menu-main.is-dishes { scroll-snap-type: y mandatory; }
 .menu-main.is-dishes .dish-slide { scroll-snap-align: start; scroll-snap-stop: always; }
-.menu-main.is-all-menu { scroll-snap-type: y mandatory; }
-.menu-main.is-all-menu .menu-slide { scroll-snap-align: start; scroll-snap-stop: always; }
+
 .menu-main::-webkit-scrollbar { display: none; }
 .menu-slide {
   position: relative;
@@ -906,6 +905,12 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--cream); outline
   .video-panel { padding-right: 15px; padding-left: 15px; }
   .video-link-card { gap: 11px; padding-right: 12px; padding-left: 12px; }
   .video-link-text strong { font-size: 12px; }
+  .landing-slide .list-background { filter: blur(4px) brightness(1.08) saturate(1.08); }
+  .landing-hero-media img, .landing-featured-media img { filter: brightness(1.08) saturate(1.08); }
+  .landing-hero::after { background: linear-gradient(90deg, rgba(15, 10, 9, .8) 0%, rgba(15, 10, 9, .58) 47%, rgba(15, 10, 9, .1) 100%), linear-gradient(0deg, rgba(15, 10, 9, .32), transparent 58%); }
+  .landing-featured-overlay { background: linear-gradient(180deg, rgba(18, 13, 14, .01) 14%, rgba(18, 13, 14, .12) 42%, rgba(18, 13, 14, .84) 100%); }
+  .dish-photo, .list-item-media img, .social-tile-image { filter: brightness(1.06) saturate(1.06); }
+  .slide-glow { background: linear-gradient(180deg, rgba(18, 13, 14, .04) 10%, rgba(18, 13, 14, .06) 36%, rgba(18, 13, 14, .52) 64%, var(--ink) 94%); }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
