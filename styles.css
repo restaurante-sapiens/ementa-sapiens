@@ -205,6 +205,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--cream); outline
 }
 .menu-main.is-dishes { scroll-snap-type: y mandatory; }
 .menu-main.is-dishes .dish-slide { scroll-snap-align: start; scroll-snap-stop: always; }
+.menu-main.is-all-menu { scroll-snap-type: y mandatory; }
+.menu-main.is-all-menu .menu-slide { scroll-snap-align: start; scroll-snap-stop: always; }
 .menu-main::-webkit-scrollbar { display: none; }
 .menu-slide {
   position: relative;

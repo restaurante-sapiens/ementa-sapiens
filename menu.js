@@ -128,7 +128,7 @@ const landingCategoryImages = {
   "Focaccias": "assets/dishes/focaccia-alcatra.jpg",
   "Infantil": "assets/dishes/hamburguer-dos-acores.jpg",
   "Extras": "assets/dishes/pao-alho-queijo-bacon.jpg",
-  "Bebidas": "assets/video-posters/sangria-limoncello.jpg",
+  "Bebidas": "assets/categories/bebidas-card.jpg",
   "Vinhos": "assets/dishes/vinho-sitio-santo-rose.jpg",
   "Gin": "assets/categories/gordons-card.png",
   "Licores": "assets/categories/licor-beirao-card.png",
@@ -615,6 +615,7 @@ function renderCurrentView(restoreKey, restoreScrollTop) {
 
   menuMain.innerHTML = content;
   menuMain.classList.toggle("is-dishes", appView === "dishes");
+  menuMain.classList.toggle("is-all-menu", appView === "all-menu");
   dishBackFixed.hidden = appView !== "dishes" || !currentCategory;
   if (!dishBackFixed.hidden) {
     const backText = dishReturnView === "all-menu"
