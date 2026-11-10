@@ -54,6 +54,9 @@ const menu = [
   ]},
   { name: "Extras", items: [
     { name: "Ovo", price: 1.50 }, { name: "Dose de batatas", price: 2.50 }, { name: "Molho de francesinha", price: 2.50 }, { name: "Ingrediente extra", price: 2.00 }, { name: "Extra pão", price: 1.00 }, { name: "Extra vegetariano", price: 7.50 }, { name: "Extra hambúrguer ou bife · 120 g", price: 7.50 }, { name: "Substituição de pão", price: 1.00 }, { name: "Substituição de hambúrguer ou bife", price: 3.00 }, { name: "Substituição para vegetariano", price: 3.00 }, { name: "Embalagem takeaway", price: 0.50 }, { name: "Saco de papel", price: 0.20 }
+  ]},
+  { name: "Sobremesas", items: [
+    { name: "Natas do céu", price: 4.50, image: "assets/dishes/natas-do-ceu.jpg" }, { name: "Mousse de chocolate", price: 4.50, image: "assets/dishes/mousse-chocolate.jpg" }, { name: "Mousse de Oreo", price: 4.50 }, { name: "Mousse de manga", price: 4.50 }, { name: "Mousse de maracujá", price: 4.50 }, { name: "Serradura", price: 4.50, image: "assets/dishes/serradura.webp" }, { name: "Bolo de bolacha", price: 5.00, image: "assets/dishes/bolo-bolacha.jpg" }, { name: "Cheesecake de frutos vermelhos", price: 5.00, image: "assets/dishes/cheesecake-frutos-vermelhos.jpg" }, { name: "Bola de gelado", price: 3.00 }, { name: "Haribo", price: 3.00 }, { name: "Magnum bomboniera", price: 5.00 }, { name: "Outras sugestões", priceDisplay: { pt: "Sob consulta", en: "By request" } }
   ]}
 ];
 
@@ -70,12 +73,12 @@ const scrollProgressFill = document.getElementById("scroll-progress-fill");
 const brandLink = document.querySelector(".brand");
 let socialVideoObserver = null;
 const detailCategories = new Set(["Entradas", "Saladas", "Pregos", "Hambúrgueres", "Cachorros", "No prato", "Focaccias", "Infantil"]);
-const categoryOrder = ["Entradas", "Saladas", "Pregos", "Hambúrgueres", "Cachorros", "No prato", "Focaccias", "Infantil", "Extras", "Bebidas", "Cervejas", "Sangrias", "Vinhos", "Gin", "Licores", "Whiskey", "Cafetaria", "Vídeos", "Informações"];
+const categoryOrder = ["Entradas", "Saladas", "Pregos", "Hambúrgueres", "Cachorros", "No prato", "Focaccias", "Infantil", "Extras", "Bebidas", "Cervejas", "Sangrias", "Vinhos", "Gin", "Licores", "Whiskey", "Cafetaria", "Sobremesas", "Vídeos", "Informações"];
 const categoryColors = {
-  "No prato": "#4b1d3f", "Focaccias": "#4a5a24", "Pregos": "#6b2230", "Hambúrgueres": "#7a2a1f", "Cachorros": "#5a3a1c", "Saladas": "#3b5a2a", "Entradas": "#6b4a1a", "Infantil": "#1f4a5c", "Extras": "#5a3a1c", "Cafetaria": "#5a3a1c", "Bebidas": "#1f4a5c", "Cervejas": "#6b4a1a", "Licores": "#4b1d3f", "Gin": "#4b1d3f", "Whiskey": "#4b1d3f", "Vinhos": "#5b1a26", "Sangrias": "#6b2230", "Informações": "#4b1d3f"
+  "No prato": "#4b1d3f", "Focaccias": "#4a5a24", "Pregos": "#6b2230", "Hambúrgueres": "#7a2a1f", "Cachorros": "#5a3a1c", "Saladas": "#3b5a2a", "Entradas": "#6b4a1a", "Infantil": "#1f4a5c", "Extras": "#5a3a1c", "Cafetaria": "#5a3a1c", "Bebidas": "#1f4a5c", "Cervejas": "#6b4a1a", "Licores": "#4b1d3f", "Gin": "#4b1d3f", "Whiskey": "#4b1d3f", "Vinhos": "#5b1a26", "Sangrias": "#6b2230", "Sobremesas": "#6b2230", "Informações": "#4b1d3f"
 };
 const englishCategory = {
-  "No prato": "Steak dishes", "Focaccias": "Focaccia", "Pregos": "Pregos", "Hambúrgueres": "Burgers", "Cachorros": "Hot dogs", "Saladas": "Salads", "Entradas": "Starters", "Infantil": "Kids’ menu", "Extras": "Extras", "Cafetaria": "Coffee", "Bebidas": "Drinks", "Cervejas": "Beer", "Licores": "Liqueurs", "Gin": "Gin", "Whiskey": "Whiskey", "Vinhos": "Wine", "Sangrias": "Sangria", "Vídeos": "Behind the scenes", "Informações": "Information"
+  "No prato": "Steak dishes", "Focaccias": "Focaccia", "Pregos": "Pregos", "Hambúrgueres": "Burgers", "Cachorros": "Hot dogs", "Saladas": "Salads", "Entradas": "Starters", "Infantil": "Kids’ menu", "Extras": "Extras", "Cafetaria": "Coffee", "Bebidas": "Drinks", "Cervejas": "Beer", "Licores": "Liqueurs", "Gin": "Gin", "Whiskey": "Whiskey", "Vinhos": "Wine", "Sangrias": "Sangria", "Sobremesas": "Desserts", "Vídeos": "Behind the scenes", "Informações": "Information"
 };
 const englishGroups = {
   "Artesanais": "Craft beer", "Tinto": "Red wine", "Branco": "White wine", "Verde": "Vinho Verde", "Verdes": "Vinho Verde", "Douro branco": "Douro white", "Dão branco": "Dão white", "Alentejo branco": "Alentejo white", "Alentejo rosé": "Alentejo rosé", "Douro tinto": "Douro red", "Dão tinto": "Dão red", "Setúbal tinto": "Setúbal red", "Alentejo tinto": "Alentejo red", "Espumantes": "Sparkling wines", "A copo": "By the glass"
@@ -85,7 +88,8 @@ const englishNames = {
   "Extras|Dose de batatas": "Side of fries", "Extras|Molho de francesinha": "Francesinha sauce", "Extras|Ingrediente extra": "Extra ingredient", "Extras|Extra pão": "Extra bread", "Extras|Extra vegetariano": "Vegetarian extra", "Extras|Extra hambúrguer ou bife · 120 g": "Extra burger or steak · 120 g", "Extras|Substituição de pão": "Swap bread", "Extras|Substituição de hambúrguer ou bife": "Swap burger or steak", "Extras|Substituição para vegetariano": "Swap for vegetarian", "Extras|Embalagem takeaway": "Takeaway container", "Extras|Saco de papel": "Paper bag",
   "Cafetaria|Café": "Espresso", "Cafetaria|Café duplo": "Double espresso", "Cafetaria|Carioca de café": "Coffee infusion", "Cafetaria|Carioca de limão": "Lemon infusion", "Cafetaria|Cevada": "Barley drink", "Cafetaria|Descafeinado": "Decaf coffee", "Cafetaria|Pingo": "Espresso with a dash of milk", "Cafetaria|Abatanado": "Long black", "Cafetaria|Meia de leite": "Coffee with milk", "Cafetaria|Chá": "Tea",
   "Bebidas|Água 0,50 l": "Still water · 0.5 L", "Bebidas|Água 1 l": "Still water · 1 L", "Bebidas|Água das Pedras": "Água das Pedras sparkling water", "Bebidas|Água das Pedras com sabores": "Flavoured sparkling water", "Bebidas|Sumo de laranja natural": "Fresh orange juice", "Bebidas|Limonada de sabores": "Flavoured lemonade", "Cervejas|Fino · 25 cl": "Draft beer · 25 cl", "Cervejas|Rei · 50 cl": "Draft beer · 50 cl", "Cervejas|Stout de pressão": "Draft stout", "Cervejas|Cerveja sem álcool": "Non-alcoholic beer", "Sangrias|Branco / tinto": "White / red", "Sangrias|Frutos vermelhos": "Red berries", "Sangrias|Maracujá": "Passion fruit", "Sangrias|Aperol": "Aperol",
-  "Licores|Amêndoa Amarga": "Bitter almond liqueur", "Licores|Licor Beirão": "Beirão liqueur", "Licores|Vinho do Porto": "Port wine", "Whiskey|Shot · JB": "JB shot", "Cervejas|Outras sugestões": "Other suggestions"
+  "Licores|Amêndoa Amarga": "Bitter almond liqueur", "Licores|Licor Beirão": "Beirão liqueur", "Licores|Vinho do Porto": "Port wine", "Whiskey|Shot · JB": "JB shot", "Cervejas|Outras sugestões": "Other suggestions",
+  "Sobremesas|Natas do céu": "Heavenly cream dessert", "Sobremesas|Mousse de chocolate": "Chocolate mousse", "Sobremesas|Mousse de Oreo": "Oreo mousse", "Sobremesas|Mousse de manga": "Mango mousse", "Sobremesas|Mousse de maracujá": "Passion fruit mousse", "Sobremesas|Serradura": "Serradura", "Sobremesas|Bolo de bolacha": "Portuguese biscuit cake", "Sobremesas|Cheesecake de frutos vermelhos": "Red berry cheesecake", "Sobremesas|Bola de gelado": "Ice cream scoop", "Sobremesas|Haribo": "Haribo sweets", "Sobremesas|Magnum bomboniera": "Magnum ice cream box", "Sobremesas|Outras sugestões": "Other suggestions"
 };
 const englishDescriptions = {
   "No prato|À Portuguesa": "Rump steak (300 g), fried egg, salad and fries.", "No prato|Bife Sapiens": "Rump steak (300 g), salad and fries.", "No prato|Bife Cogumelos": "Rump steak (300 g), sautéed mushrooms, fresh cream sauce and fries.", "No prato|T-Bone Steak": "T-bone steak (300 g), fries and salad.",
@@ -99,7 +103,7 @@ const englishDescriptions = {
 const englishNotes = {
   "Saladas": "All options can be customised. Bread, protein or vegetarian substitutions are available at an extra cost; see extras.",
   "Pregos": "Served with fries.", "Hambúrgueres": "Served with fries.", "Cachorros": "Served with fries.",
-  "Focaccias": "Served with fries and Sapiens sauce: olive oil, garlic, basil, olives, onion and oregano.",
+  "Focaccias": "Served with fries and Sapiens sauce: olive oil, garlic, basil, olives, onion and oregano.", "Sobremesas": "Other suggestions available on request.",
   "Infantil": "For children up to 12 years old · served with fries."
 };
 const categoryByName = new Map(menu.map(function (category) { return [category.name, category]; }));
@@ -109,7 +113,10 @@ const landingCategoryGroups = [
   { title: "Para beber", englishTitle: "Something to drink", description: "Sangrias e cervejas em destaque", englishDescription: "Sangria and beer in the spotlight", featuredCategories: [
     { name: "Sangrias", image: "assets/dishes/sangria-frutos-vermelhos.jpg", eyebrow: "DA CASA", englishEyebrow: "HOUSE FAVOURITES", detail: "Vários sabores", englishDetail: "A range of flavours" },
     { name: "Cervejas", image: "assets/dishes/cerveja-1927-munich.jpg", eyebrow: "ARTESANAIS E CLÁSSICAS", englishEyebrow: "CRAFT AND CLASSIC", detail: "Descobre a seleção", englishDetail: "Explore the selection" }
-  ], categories: ["Bebidas", "Vinhos", "Gin", "Licores", "Whiskey", "Cafetaria"] }
+  ], categories: ["Bebidas", "Vinhos", "Gin", "Licores", "Whiskey", "Cafetaria"] },
+  { title: "Para fechar", englishTitle: "Something sweet", description: "Sobremesas", englishDescription: "Desserts", featuredCategories: [
+    { name: "Sobremesas", image: "assets/dishes/bolo-bolacha.jpg", eyebrow: "UM FINAL DOCE", englishEyebrow: "A SWEET FINISH", detail: "Bolos, mousses e gelados", englishDetail: "Cakes, mousses and ice cream" }
+  ], categories: [] }
  ];
 const landingCategoryImages = {
   "Entradas": "assets/dishes/ovos-rotos-presunto.jpg",
